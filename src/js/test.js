@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-import test from './test.css';
 import Sun from '../images/sun.png';
 
 
