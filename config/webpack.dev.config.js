@@ -207,6 +207,11 @@ module.exports = {
 					}
 				}
 			},
+			// scripts
+			{
+				test: /geo2rect\.js$/,
+				use: 'raw-loader'
+			},
 			// image loader
 			{
 				test: /\.(gif|jpg|png|svg)$/,

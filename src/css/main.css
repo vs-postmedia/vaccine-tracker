@@ -5,7 +5,10 @@
 	font-family: BentonSansCond-BoldItalic;
 }
 
-
+#app {
+	margin: 0 auto;
+	max-width: 750px;
+}
 
 /* POSTMEDIA STYLES */
 #app h1 {

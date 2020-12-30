@@ -15,9 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.10.2",
-    "axios": "^0.19.2",
+    "@flourish/popup": "^2.1.5",
+    "@turf/turf": "^5.1.6",
     "d3": "^5.15.0",
-    "d3-svg-annotation": "^2.5.1"
+    "d3-svg-annotation": "^2.5.1",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -40,6 +42,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-safe-parser": "^4.0.2",
+    "raw-loader": "^4.0.2",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
