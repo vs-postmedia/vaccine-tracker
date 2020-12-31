@@ -1,0 +1,12 @@
+#map {
+	height: 250px;
+}
+#map .labels {
+	font-size: 0.8rem;
+	padding: 2px;
+	pointer-events: none;
+	text-anchor: middle;
+}
+#map #PE.labels {
+	display: none;
+}
