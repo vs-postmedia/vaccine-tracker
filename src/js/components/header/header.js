@@ -7,7 +7,7 @@ const init = async (data, provCode) => {
 	const provName = prov.Province;
 
 	return `
-		<h1>${provName} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov['Doses administered']))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${prov['% of population']}%</span> of the population.</h1>
+		<h1>${provName} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov['Doses administered']))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${prov['% of population']}%</span> of the province.</h1>
 	`;
 }
 

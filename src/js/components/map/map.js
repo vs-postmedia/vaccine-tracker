@@ -6,15 +6,20 @@ import * as d3 from 'd3';
 import Popup from '@flourish/popup';
 import helper from '../../helper-functions';
 import * as topojson from 'topojson-client';
+import { legendColor } from 'd3-svg-legend'
 import TooltipTemplate from '../TooltipTemplate/tooltip-template';
 
 
 import './map.css';
 
-let popup;
+let popup = Popup();
+
+console.log(legendColor)
+
+// i think this is unused
 const config = {
 	padding : 30,
-	projection : d3.geoMercator().scale([200]),
+	// projection : d3.geoMercator().scale([200]),
 	duration : 1000,
 	key: d => d.properties.code,
 	grid: {
@@ -38,14 +43,14 @@ const config = {
 const init = async (data, topoShapes) => {
 	console.log('mpa!');
 
-	const app = document.querySelector('#map');
-	config.width = app.offsetWidth;
-	config.height = app.offsetHeight;
+	const map = document.querySelector('#map');
+	config.width = map.offsetWidth;
+	config.height = map.offsetHeight;
 	console.log(config)
 
 	// colour scale (postmedia blue)
 	const colours = d3.scaleQuantile()
-		.domain([0,0.1,0.2,0.4,0.6,0.8])
+		.domain([0,0.1,0.2,0.4,0.6,0.8,1])
 		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
 		// .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
 
@@ -58,10 +63,6 @@ const init = async (data, topoShapes) => {
 		.attr('width',config.width)
 		.attr('height',config.height);
 
-	// add popup
-	popup = Popup();
-	// const shape = d3.selectAll('.province');
-	// popup = Popup().container(shape);
 
 	/* 
 	*	MOVE TO INIT
@@ -83,6 +84,9 @@ const init = async (data, topoShapes) => {
 	    d3.select(`#${d.prov_code}`)
 	    	.style('fill', colours(d['% of population']));
 	});
+
+	// add a legend
+	addLegend(map, colours);
 
 	console.log(mapData);
 }
@@ -112,6 +116,41 @@ function addLabels(data, path, svg) {
 				return centroid;
 			})
 			.text(d => `${helper.numberWithCommas(parseFloat(d.properties['% of population']))}%`);
+}
+
+function addLegend(svg, legendScale) {
+	const legend = d3.select('#map')
+		.append('div')
+		.attr('class', 'legend');
+	
+	legend.append('p')
+			.attr('class', 'legend-title')
+			.text('% vaccinated');
+
+	legend.append('div')
+		.attr('class', 'legend-fill');
+
+	legend.append('p')
+			.attr('class', 'legend-value legend-value-left')
+			.text('0');
+
+	legend.append('p')
+			.attr('class', 'legend-value legend-value-right')
+			.text('1%');
+
+	// svg.append('g')
+	// 	.attr('class', 'legend');
+
+	// const legend = legendColor()
+	// 	.cells([0,0.4,0.8,1])
+	// 	.labelFormat(d3.format('.1f'))
+	// 	.orient('horizontal')
+	// 	.title('title')
+	// 	.shapeWidth(30)
+	// 	.scale(legendScale);
+
+	// svg.select('.legend')
+	// 	.call(legend);
 }
 
 function addZoom(svg) {
