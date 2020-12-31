@@ -1,6 +1,8 @@
 // NOTE: https://bl.ocks.org/officeofjane/d33d6ef783993b60b15a3fe0f8da1481
 // hex shapes: https://github.com/BobHarper1/d3.geo2recthex/blob/master/README.md
 
+// legend option: https://d3-legend.susielu.com/
+
 
 import * as d3 from 'd3';
 import Popup from '@flourish/popup';
