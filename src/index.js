@@ -9,6 +9,7 @@ import * as d3 from 'd3';
 import head from './js/components/header/header';
 import tilemap from './js/components/canada-tilemap/canada-tilemap.js';
 import provinces from './data/canada-tilemap.json';
+import helper from './js/helper-functions';
 // import map from './js/components/map/map';
 // import config from './data/config.json';
 
@@ -19,7 +20,9 @@ const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/
 
 const init = async () => {
 	const header = document.querySelector('#header');
-	const provCode = 'BC';
+	const provCode = helper.getPrCode();
+
+	console.log(provCode)
 
 	// vaccination data
 	const vax = await d3.csv(vaxDataUrl);
@@ -34,7 +37,7 @@ const init = async () => {
 	header.innerHTML = headerCopy;
 
 	// build map
-	tilemap.init('#map', data, colours);
+	tilemap.init('#map', data, colours, provCode);
 	// map.init(vax, provinces);
 };
 
