@@ -1,6 +1,6 @@
 {
-  "name": "graphics-template",
-  "homepage": "https://vs-postmedia.github.io/graphics-template/",
+  "name": "vaccine-tracker",
+  "homepage": "https://vs-postmedia.github.io/vaccine-tracker/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,7 +16,6 @@
   "dependencies": {
     "@babel/runtime": "^7.10.2",
     "@flourish/popup": "^2.1.5",
-    "@turf/turf": "^5.1.6",
     "d3": "^5.15.0",
     "d3-svg-annotation": "^2.5.1",
     "d3-svg-legend": "^2.25.6",
