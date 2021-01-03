@@ -22,8 +22,6 @@ const init = async () => {
 	const header = document.querySelector('#header');
 	const provCode = helper.getPrCode();
 
-	console.log(provCode)
-
 	// vaccination data
 	const vax = await d3.csv(vaxDataUrl);
 	const joinedData = await joinData(vax, provinces);
@@ -37,7 +35,7 @@ const init = async () => {
 	header.innerHTML = headerCopy;
 
 	// build map
-	tilemap.init('#map', data, colours, provCode);
+	tilemap.init('#map', data, colours);
 	// map.init(vax, provinces);
 };
 

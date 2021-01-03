@@ -54,8 +54,10 @@ const init = async(el, data, colours) => {
         	.style('fill', colours(d['% of population']));
     });
 
+    
     // add a legend
-	addLegend(map, colours);
+    const scaleMax = Math.floor(d3.max(data, d => d['% of population']));
+	addLegend(map, colours, `${scaleMax}+`);
 
 	console.log(data)
 }
@@ -71,7 +73,7 @@ function addLabels(svg, data, label) {
 			.attr('class', 'label')
 }
 
-function addLegend(svg, legendScale) {
+function addLegend(svg, legendScale, scaleMax) {
 	const legend = d3.select('#map')
 		.append('div')
 		.attr('class', 'legend');
@@ -89,7 +91,7 @@ function addLegend(svg, legendScale) {
 
 	legend.append('p')
 			.attr('class', 'legend-value legend-value-right')
-			.text('1+');
+			.text(scaleMax);
 }
 
 function drawShapes(svg, data, square) {
