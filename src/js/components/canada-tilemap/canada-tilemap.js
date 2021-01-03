@@ -12,7 +12,7 @@ const marginWeb = {top: 50, right: 50, bottom: 50, left: 50};
 let windowWidth, shapeMultiplier, x, y;
 
 
-const init = async(el, data, colours) => {
+const init = async(el, data) => {
 	const label = 'abbr'; // OR 'code'
 	const square = d3.symbol().type(d3.symbolSquare);
 
@@ -48,6 +48,11 @@ const init = async(el, data, colours) => {
     // add labels
    addLabels(svg, data, label);
 
+    // add colours & a legend
+    const scaleMax = d3.max(data, d => d['% of population']);
+    const colours = assignColours(data, scaleMax);
+	addLegend(map, colours, `${Math.floor(scaleMax)}+`);
+
     // set fill colour for shapes
     data.forEach(function(d) {
         d3.select(`#${d.code}`)
@@ -55,9 +60,6 @@ const init = async(el, data, colours) => {
     });
 
     
-    // add a legend
-    const scaleMax = Math.floor(d3.max(data, d => d['% of population']));
-	addLegend(map, colours, `${scaleMax}+`);
 
 	console.log(data)
 }
@@ -92,6 +94,14 @@ function addLegend(svg, legendScale, scaleMax) {
 	legend.append('p')
 			.attr('class', 'legend-value legend-value-right')
 			.text(scaleMax);
+}
+
+function assignColours(data, scaleMax) {
+	// colour scale (postmedia blue)
+	return d3.scaleQuantile()
+		.domain([0,scaleMax])
+		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
+		// .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
 }
 
 function drawShapes(svg, data, square) {

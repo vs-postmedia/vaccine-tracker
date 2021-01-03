@@ -26,7 +26,6 @@ const init = async () => {
 	const vax = await d3.csv(vaxDataUrl);
 	const joinedData = await joinData(vax, provinces);
 	const data = parseNumbers(joinedData);
-	const colours = assignColours(data);
 	// load province shapes
 	// const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
 
@@ -35,17 +34,10 @@ const init = async () => {
 	header.innerHTML = headerCopy;
 
 	// build map
-	tilemap.init('#map', data, colours);
+	tilemap.init('#map', data);
 	// map.init(vax, provinces);
 };
 
-function assignColours(data) {
-	// colour scale (postmedia blue)
-	return d3.scaleQuantile()
-		.domain([0,0.1,0.2,0.4,0.6,0.8,1])
-		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
-		// .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
-}
 
 function joinData(data, shapes) {
 	// join by prov code
