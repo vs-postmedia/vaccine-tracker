@@ -1,55 +1,55 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 153:
+/***/ 145:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 154:
+/***/ 146:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 155:
+/***/ 147:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 156:
+/***/ 148:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 183:
+/***/ 172:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 184:
+/***/ 173:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 185:
+/***/ 174:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 186:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57,118 +57,87 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(62);
+var es_array_filter = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(78);
+var es_array_for_each = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(151);
+var es_array_map = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__(152);
+var es_object_assign = __webpack_require__(143);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(82);
+var web_dom_collections_for_each = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(10);
+var regenerator = __webpack_require__(8);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(31);
+var runtime = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(16);
+var asyncToGenerator = __webpack_require__(15);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(153);
+var normalize = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(154);
+var colors = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(155);
+var fonts = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(156);
+var main = __webpack_require__(148);
 
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
-var d3 = __webpack_require__(3);
+var d3 = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
 var es_array_concat = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(85);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
-var es_array_includes = __webpack_require__(157);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(51);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(162);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(92);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__(165);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.includes.js
-var es_string_includes = __webpack_require__(166);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__(94);
+var es_function_name = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(170);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
-var es_string_search = __webpack_require__(172);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
-var web_dom_collections_iterator = __webpack_require__(174);
+var es_string_replace = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.js
-var web_url = __webpack_require__(175);
+var web_url = __webpack_require__(156);
 
 // CONCATENATED MODULE: ./src/js/helper-functions.js
 
 
+const helper = {
+  getPrCode() {
+    const defaultPrCode = 'BC';
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const prCode = urlParams.get('prov'); // is there a code?
 
-
-
-
-
-
-
-
-
-var helper = {
-  getPrCode: function getPrCode() {
-    var province;
-    var defaultPrCode = 'BC';
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var prCode = urlParams.get('prov');
-    return this.validProvinceCodes.includes(prCode.toUpperCase()) ? prCode.toUpperCase() : defaultPrCode;
+    const code = prCode ? prCode.toUpperCase() : defaultPrCode;
+    return this.validProvinceCodes.includes(code) ? code : defaultPrCode;
   },
-  map: function map(num, in_min, in_max, out_min, out_max) {
+
+  map(num, in_min, in_max, out_min, out_max) {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
   },
+
   months: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
-  numberWithCommas: function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   },
+
   validProvinceCodes: ['YT', 'NT', 'NU', 'BC', 'AB', 'SK', 'MB', 'ON', 'QC', 'NL', 'NB', 'PE', 'NS']
 };
 /* harmony default export */ var helper_functions = (helper);
 // EXTERNAL MODULE: ./src/js/components/header/header.css
-var header_header = __webpack_require__(183);
+var header_header = __webpack_require__(172);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
@@ -210,10 +179,10 @@ var init = /*#__PURE__*/function () {
   init: init
 });
 // EXTERNAL MODULE: ./node_modules/@flourish/popup/src/index.js + 5 modules
-var src = __webpack_require__(100);
+var src = __webpack_require__(90);
 
 // EXTERNAL MODULE: ./src/js/components/TooltipTemplate/tooltip-template.css
-var tooltip_template = __webpack_require__(184);
+var tooltip_template = __webpack_require__(173);
 
 // CONCATENATED MODULE: ./src/js/components/TooltipTemplate/tooltip-template.js
 
@@ -229,7 +198,7 @@ function tooltip(data) {
 ;
 /* harmony default export */ var TooltipTemplate_tooltip_template = (tooltip); // <p class="per100k">${helper.numberWithCommas(data['Doses per 100,000 people'])} vaccinations per 100,000 people</p>
 // EXTERNAL MODULE: ./src/js/components/canada-tilemap/canada-tilemap.css
-var canada_tilemap = __webpack_require__(185);
+var canada_tilemap = __webpack_require__(174);
 
 // CONCATENATED MODULE: ./src/js/components/canada-tilemap/canada-tilemap.js
 
@@ -358,7 +327,7 @@ function handleMouseout(d) {
   init: canada_tilemap_init
 });
 // EXTERNAL MODULE: ./src/data/canada-tilemap.json
-var data_canada_tilemap = __webpack_require__(99);
+var data_canada_tilemap = __webpack_require__(89);
 
 // CONCATENATED MODULE: ./src/index.js
 
@@ -455,11 +424,11 @@ src_init();
 
 /***/ }),
 
-/***/ 99:
+/***/ 89:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Yuk.\",\"code\":\"YT\"},{\"y\":5,\"x\":2.5,\"name\":\"Northwest Territories Territories\",\"abbr\":\"N.W.T.\",\"code\":\"NT\"},{\"y\":5,\"x\":3.5,\"name\":\"Nunavut\",\"abbr\":\"Nun.\",\"code\":\"NU\"},{\"y\":4,\"x\":1,\"name\":\"British Columbia\",\"abbr\":\"B.C.\",\"code\":\"BC\"},{\"y\":4,\"x\":2,\"name\":\"Alberta\",\"abbr\":\"Alta.\",\"code\":\"AB\"},{\"y\":4,\"x\":3,\"name\":\"Saskatchewan\",\"abbr\":\"Sask.\",\"code\":\"SK\"},{\"y\":4,\"x\":4,\"name\":\"Manitoba\",\"abbr\":\"Man.\",\"code\":\"MB\"},{\"y\":3.5,\"x\":5,\"name\":\"Ontario\",\"abbr\":\"Ont.\",\"code\":\"ON\"},{\"y\":3.5,\"x\":6,\"name\":\"Quebec\",\"abbr\":\"Que.\",\"code\":\"QC\"},{\"y\":4,\"x\":7,\"name\":\"Newfoundland and Labrador\",\"abbr\":\"N.L.\",\"code\":\"NL\"},{\"y\":2.5,\"x\":6,\"name\":\"New Brunswick\",\"abbr\":\"N.B.\",\"code\":\"NB\"},{\"y\":3,\"x\":7,\"name\":\"Prince Edward Island\",\"abbr\":\"P.E.I.\",\"code\":\"PE\"},{\"y\":2,\"x\":7,\"name\":\"Nova Scotia\",\"abbr\":\"N.S.\",\"code\":\"NS\"}]");
 
 /***/ })
 
-},[[186,1,2]]]);
+},[[175,1,2]]]);
