@@ -7,8 +7,10 @@ import './css/main.css';
 // JS
 import * as d3 from 'd3';
 import head from './js/components/header/header';
-import map from './js/components/map/map';
-import config from './data/config.json';
+import tilemap from './js/components/canada-tilemap/canada-tilemap.js';
+import provinces from './data/canada-tilemap.json';
+// import map from './js/components/map/map';
+// import config from './data/config.json';
 
 // DATA
 const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
@@ -20,16 +22,50 @@ const init = async () => {
 	const provCode = 'BC';
 
 	// vaccination data
-	const vax = await d3.csv('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv');
+	const vax = await d3.csv(vaxDataUrl);
+	const joinedData = await joinData(vax, provinces);
+	const data = parseNumbers(joinedData);
+	const colours = assignColours(data);
 	// load province shapes
-	const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
+	// const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
 
 	// build header
-	const headerCopy = await head.init(vax, provCode);
+	const headerCopy = await head.init(data, provCode);
 	header.innerHTML = headerCopy;
 
 	// build map
-	map.init(vax, provinces);
+	tilemap.init('#map', data, colours);
+	// map.init(vax, provinces);
 };
 
+function assignColours(data) {
+	// colour scale (postmedia blue)
+	return d3.scaleQuantile()
+		.domain([0,0.1,0.2,0.4,0.6,0.8,1])
+		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
+		// .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
+}
+
+function joinData(data, shapes) {
+	// join by prov code
+	return shapes.map(s => {
+		const dataProps = data.filter(d => d.prov_code === s.code)[0];
+		delete dataProps.prov_code; // duplicate
+		
+		const joined = Object.assign({}, s, dataProps);
+
+		return joined;
+	});
+}
+
+
+function parseNumbers(data) {
+	data.forEach(d => {
+		d['% of population'] = +d['% of population'],
+		d['Doses administered'] = +d['Doses administered'],
+		d['Doses per 100,000 people'] = +d['Doses per 100,000 people']
+	});
+
+	return data;
+}
 init();
