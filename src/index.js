@@ -57,7 +57,7 @@ function parseNumbers(data) {
 	data.forEach(d => {
 		d['% vaccinated'] = +d['% vaccinated'],
 		d['Doses administered'] = +d['Doses administered'],
-		d['Doses per 100,000 people'] = +d['Doses per 100,000 people']
+		d['Doses per 100,000'] = +d['Doses per 100,000']
 	});
 
 	return data;
