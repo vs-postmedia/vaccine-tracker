@@ -14,6 +14,7 @@ import helper from './js/helper-functions';
 // import config from './data/config.json';
 
 // DATA
+const variable = '% vaccinated';
 const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
 
@@ -30,11 +31,11 @@ const init = async () => {
 	// const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
 
 	// build header
-	const headerCopy = await head.init(data, provCode);
+	const headerCopy = await head.init(data, provCode, variable);
 	header.innerHTML = headerCopy;
 
 	// build map
-	tilemap.init('#map', data);
+	tilemap.init('#map', data, variable);
 	// map.init(vax, provinces);
 };
 
@@ -54,7 +55,7 @@ function joinData(data, shapes) {
 
 function parseNumbers(data) {
 	data.forEach(d => {
-		d['% of population'] = +d['% of population'],
+		d['% vaccinated'] = +d['% vaccinated'],
 		d['Doses administered'] = +d['Doses administered'],
 		d['Doses per 100,000 people'] = +d['Doses per 100,000 people']
 	});

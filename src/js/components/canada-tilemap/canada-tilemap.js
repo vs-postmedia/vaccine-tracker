@@ -9,10 +9,11 @@ let popup = Popup();
 const mobileBreakpoint = 500;
 const marginMobile = {top: 50, right: 30, bottom: 25, left: 25};
 const marginWeb = {top: 50, right: 50, bottom: 50, left: 50};
-let windowWidth, shapeMultiplier, x, y;
+let windowWidth, shapeMultiplier, x, y, displayVariable;
 
 
-const init = async(el, data) => {
+const init = async(el, data, metric) => {
+	displayVariable = metric;
 	const label = 'abbr'; // OR 'code'
 	const square = d3.symbol().type(d3.symbolSquare);
 
@@ -46,17 +47,17 @@ const init = async(el, data) => {
   	drawShapes(svg, data, square);
 
     // add labels
-   addLabels(svg, data, label);
+    addLabels(svg, data, label);
 
     // add colours & a legend
-    const scaleMax = d3.max(data, d => d['% of population']);
-    const colours = assignColours(data, scaleMax);
-	addLegend(map, colours, `${Math.floor(scaleMax)}+`);
+    const scaleMax = d3.max(data, d => d[displayVariable]);
+    const colours = assignColours(scaleMax);
+	addLegend(map, colours, `${Math.floor(scaleMax)}+`, displayVariable);
 
     // set fill colour for shapes
     data.forEach(function(d) {
         d3.select(`#${d.code}`)
-        	.style('fill', colours(d['% of population']));
+        	.style('fill', colours(d[displayVariable]));
     });
 
     
@@ -75,14 +76,14 @@ function addLabels(svg, data, label) {
 			.attr('class', 'label')
 }
 
-function addLegend(svg, legendScale, scaleMax) {
+function addLegend(svg, legendScale, scaleMax, displayVariable) {
 	const legend = d3.select('#map')
 		.append('div')
 		.attr('class', 'legend');
 	
 	legend.append('p')
 			.attr('class', 'legend-title')
-			.text('% vaccinated');
+			.text(displayVariable);
 
 	legend.append('div')
 		.attr('class', 'legend-fill');
@@ -96,12 +97,11 @@ function addLegend(svg, legendScale, scaleMax) {
 			.text(scaleMax);
 }
 
-function assignColours(data, scaleMax) {
+function assignColours(scaleMax) {
 	// colour scale (postmedia blue)
 	return d3.scaleQuantile()
-		.domain([0,scaleMax])
+		.domain([0, scaleMax])
 		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
-		// .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
 }
 
 function drawShapes(svg, data, square) {
@@ -122,7 +122,7 @@ function drawShapes(svg, data, square) {
 function handleMouseenter(d) {
 	popup
 		.point(event.pageX, event.pageY)
-		.html(TooltipTemplate(d))
+		.html(TooltipTemplate(d, displayVariable))
 		.draw();
 }
 
