@@ -48,6 +48,10 @@
 	flex: 1;
 }
 
+#app .source {
+	margin-left: 5px;
+}
+
 #app .note,
 #app .source,
 #app .credit {
