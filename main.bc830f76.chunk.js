@@ -151,7 +151,7 @@ var header_header = __webpack_require__(172);
 
 var init = /*#__PURE__*/function () {
   var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, provCode) {
-    var prov, provName;
+    var prov;
     return regenerator_default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -159,10 +159,9 @@ var init = /*#__PURE__*/function () {
             prov = data.filter(function (d) {
               return d.code === provCode;
             })[0];
-            provName = prov.name;
-            return _context.abrupt("return", "\n\t\t<h1>".concat(provName, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% vaccinated'], "%</span> of the province.</h1>\n\t"));
+            return _context.abrupt("return", "\n\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% vaccinated'], "%</span> of the province.</h1>\n\t"));
 
-          case 3:
+          case 2:
           case "end":
             return _context.stop();
         }
@@ -417,7 +416,7 @@ function joinData(data, shapes) {
 
 function parseNumbers(data) {
   data.forEach(function (d) {
-    d['% vaccinated'] = +d['% vaccinated'], d['Doses administered'] = +d['Doses administered'], d['Doses per 100,000 people'] = +d['Doses per 100,000 people'];
+    d['% vaccinated'] = +d['% vaccinated'], d['Doses administered'] = +d['Doses administered'], d['Doses per 100,000'] = +d['Doses per 100,000'];
   });
   return data;
 }
