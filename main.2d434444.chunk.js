@@ -160,7 +160,7 @@ var init = /*#__PURE__*/function () {
               return d.code === provCode;
             })[0];
             provName = prov.name;
-            return _context.abrupt("return", "\n\t\t<h1>".concat(provName, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% of population'], "%</span> of the province.</h1>\n\t"));
+            return _context.abrupt("return", "\n\t\t<h1>".concat(provName, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% vaccinated'], "%</span> of the province.</h1>\n\t"));
 
           case 3:
           case "end":
@@ -190,8 +190,8 @@ var tooltip_template = __webpack_require__(173);
 
 
 
-function tooltip(data) {
-  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">").concat(helper_functions.numberWithCommas(data['Doses administered']), " doses have been administered \u2013 about ").concat(data['% of population'], "% of the province.</p>\n\t\t</div>\n\t");
+function tooltip(data, variable) {
+  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">").concat(helper_functions.numberWithCommas(data['Doses administered']), " doses have been administered \u2013 about ").concat(data[variable], "% of the province.</p>\n\t\t</div>\n\t");
   return template;
 }
 
@@ -226,15 +226,16 @@ var marginWeb = {
   bottom: 50,
   left: 50
 };
-var windowWidth, shapeMultiplier, x, y;
+var windowWidth, shapeMultiplier, x, y, canada_tilemap_displayVariable;
 
 var canada_tilemap_init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(el, data) {
+  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(el, data, metric) {
     var label, square, margin, height, width, svg, scaleMax, colours;
     return regenerator_default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            canada_tilemap_displayVariable = metric;
             label = 'abbr'; // OR 'code'
 
             square = d3["g" /* symbol */]().type(d3["h" /* symbolSquare */]); // calculations to jankily adjust map dimensions
@@ -262,17 +263,17 @@ var canada_tilemap_init = /*#__PURE__*/function () {
             addLabels(svg, data, label); // add colours & a legend
 
             scaleMax = d3["c" /* max */](data, function (d) {
-              return d['% of population'];
+              return d[canada_tilemap_displayVariable];
             });
-            colours = assignColours(data, scaleMax);
-            addLegend(map, colours, "".concat(Math.floor(scaleMax), "+")); // set fill colour for shapes
+            colours = assignColours(scaleMax);
+            addLegend(map, colours, "".concat(Math.floor(scaleMax), "+"), canada_tilemap_displayVariable); // set fill colour for shapes
 
             data.forEach(function (d) {
-              d3["f" /* select */]("#".concat(d.code)).style('fill', colours(d['% of population']));
+              d3["f" /* select */]("#".concat(d.code)).style('fill', colours(d[canada_tilemap_displayVariable]));
             });
             console.log(data);
 
-          case 19:
+          case 20:
           case "end":
             return _context.stop();
         }
@@ -280,7 +281,7 @@ var canada_tilemap_init = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function init(_x, _x2) {
+  return function init(_x, _x2, _x3) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -293,17 +294,17 @@ function addLabels(svg, data, label) {
   }).attr('class', 'label');
 }
 
-function addLegend(svg, legendScale, scaleMax) {
+function addLegend(svg, legendScale, scaleMax, displayVariable) {
   var legend = d3["f" /* select */]('#map').append('div').attr('class', 'legend');
-  legend.append('p').attr('class', 'legend-title').text('% vaccinated');
+  legend.append('p').attr('class', 'legend-title').text(displayVariable);
   legend.append('div').attr('class', 'legend-fill');
   legend.append('p').attr('class', 'legend-value legend-value-left').text('0');
   legend.append('p').attr('class', 'legend-value legend-value-right').text(scaleMax);
 }
 
-function assignColours(data, scaleMax) {
+function assignColours(scaleMax) {
   // colour scale (postmedia blue)
-  return d3["e" /* scaleQuantile */]().domain([0, scaleMax]).range(['#D1D2D4', '#D4DAEA', '#AFBEDB', '#829DC7', '#3C76B0', '#0062A3']); // .range(['#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3']);
+  return d3["e" /* scaleQuantile */]().domain([0, scaleMax]).range(['#D1D2D4', '#D4DAEA', '#AFBEDB', '#829DC7', '#3C76B0', '#0062A3']);
 }
 
 function drawShapes(svg, data, square) {
@@ -316,7 +317,7 @@ function drawShapes(svg, data, square) {
 }
 
 function handleMouseenter(d) {
-  popup.point(event.pageX, event.pageY).html(TooltipTemplate_tooltip_template(d)).draw();
+  popup.point(event.pageX, event.pageY).html(TooltipTemplate_tooltip_template(d, canada_tilemap_displayVariable)).draw();
 }
 
 function handleMouseout(d) {
@@ -352,6 +353,7 @@ var data_canada_tilemap = __webpack_require__(89);
 // import config from './data/config.json';
 // DATA
 
+var src_variable = '% vaccinated';
 var vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
 var src_init = /*#__PURE__*/function () {
@@ -379,13 +381,13 @@ var src_init = /*#__PURE__*/function () {
             // build header
 
             _context.next = 11;
-            return components_header_header.init(data, provCode);
+            return components_header_header.init(data, provCode, src_variable);
 
           case 11:
             headerCopy = _context.sent;
             header.innerHTML = headerCopy; // build map
 
-            canada_tilemap_canada_tilemap.init('#map', data); // map.init(vax, provinces);
+            canada_tilemap_canada_tilemap.init('#map', data, src_variable); // map.init(vax, provinces);
 
           case 14:
           case "end":
@@ -415,7 +417,7 @@ function joinData(data, shapes) {
 
 function parseNumbers(data) {
   data.forEach(function (d) {
-    d['% of population'] = +d['% of population'], d['Doses administered'] = +d['Doses administered'], d['Doses per 100,000 people'] = +d['Doses per 100,000 people'];
+    d['% vaccinated'] = +d['% vaccinated'], d['Doses administered'] = +d['Doses administered'], d['Doses per 100,000 people'] = +d['Doses per 100,000 people'];
   });
   return data;
 }
