@@ -159,7 +159,7 @@ var init = /*#__PURE__*/function () {
             prov = data.filter(function (d) {
               return d.code === provCode;
             })[0];
-            return _context.abrupt("return", "\n\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% vaccinated'], "%</span> of the province.</h1>\n\t"));
+            return _context.abrupt("return", "\n\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% administered'], "%</span> of doses received from the federal government.</h1>\n\t"));
 
           case 2:
           case "end":
@@ -190,7 +190,7 @@ var tooltip_template = __webpack_require__(173);
 
 
 function tooltip(data, variable) {
-  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">").concat(helper_functions.numberWithCommas(data['Doses administered']), " doses have been administered \u2013 about ").concat(data[variable], "% of the province.</p>\n\t\t</div>\n\t");
+  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">").concat(helper_functions.numberWithCommas(data['Doses administered']), " doses have been administered \u2013 about ").concat(data[variable], "% of the received doses.</p>\n\t\t</div>\n\t");
   return template;
 }
 
@@ -352,7 +352,7 @@ var data_canada_tilemap = __webpack_require__(89);
 // import config from './data/config.json';
 // DATA
 
-var src_variable = '% vaccinated';
+var src_variable = '% administered';
 var vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
 var src_init = /*#__PURE__*/function () {
@@ -402,7 +402,8 @@ var src_init = /*#__PURE__*/function () {
 }();
 
 function joinData(data, shapes) {
-  // join by prov code
+  console.log(data, shapes); // join by prov code
+
   return shapes.map(function (s) {
     var dataProps = data.filter(function (d) {
       return d.prov_code === s.code;
