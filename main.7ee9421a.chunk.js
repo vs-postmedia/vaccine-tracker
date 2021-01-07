@@ -1,5 +1,19 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
+/***/ 143:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 144:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ 145:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14,14 +28,7 @@
 
 /***/ }),
 
-/***/ 147:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 148:
+/***/ 170:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -43,13 +50,6 @@
 /***/ }),
 
 /***/ 174:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57,57 +57,51 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(59);
+var es_array_filter = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(74);
+var es_array_for_each = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(142);
+var es_array_map = __webpack_require__(140);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__(143);
+var es_object_assign = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(78);
+var web_dom_collections_for_each = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(8);
+var regenerator = __webpack_require__(14);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(30);
+var runtime = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(15);
+var asyncToGenerator = __webpack_require__(30);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(145);
+var normalize = __webpack_require__(143);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(146);
+var colors = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(147);
+var fonts = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(148);
+var main = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
 var d3 = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
-var es_array_concat = __webpack_require__(49);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(80);
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(149);
+var es_string_replace = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.js
-var web_url = __webpack_require__(156);
+var web_url = __webpack_require__(154);
 
 // CONCATENATED MODULE: ./src/js/helper-functions.js
 
@@ -137,67 +131,49 @@ const helper = {
 };
 /* harmony default export */ var helper_functions = (helper);
 // EXTERNAL MODULE: ./src/js/components/header/header.css
-var header_header = __webpack_require__(172);
+var header_header = __webpack_require__(170);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
-
-
-
-
-
-
  // import template from 'header-template';
 
-var init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, provCode) {
-    var prov;
-    return regenerator_default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            prov = data.filter(function (d) {
-              return d.code === provCode;
-            })[0];
-            return _context.abrupt("return", "\n\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov['Doses administered'])), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov['% administered'], "%</span> of doses received from the federal government.</h1>\n\t"));
-
-          case 2:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function init(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();
+const init = async (data, provCode) => {
+  const prov = data.filter(d => d.code === provCode)[0];
+  return `
+		<h1>${prov.name} has administered <span class="highlight">${helper_functions.numberWithCommas(parseInt(prov['Doses administered']))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${prov['% administered']}%</span> of the supply received from the federal government.</h1>
+	`;
+};
 
 /* harmony default export */ var components_header_header = ({
-  init: init
+  init
 });
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
+var es_array_concat = __webpack_require__(171);
+
 // EXTERNAL MODULE: ./node_modules/@flourish/popup/src/index.js + 5 modules
-var src = __webpack_require__(90);
+var src = __webpack_require__(87);
 
 // EXTERNAL MODULE: ./src/js/components/TooltipTemplate/tooltip-template.css
-var tooltip_template = __webpack_require__(173);
+var tooltip_template = __webpack_require__(172);
 
 // CONCATENATED MODULE: ./src/js/components/TooltipTemplate/tooltip-template.js
 
 
 
-
-
 function tooltip(data, variable) {
-  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">").concat(helper_functions.numberWithCommas(data['Doses administered']), " doses have been administered \u2013 about ").concat(data[variable], "% of the received doses.</p>\n\t\t</div>\n\t");
+  const template = `
+		<div class="tooltip-content">
+			<h4>${data.name}</h4>
+			<p class="doses">${helper_functions.numberWithCommas(data['Doses administered'])} doses have been administered – about ${data[variable]}% of the current supply.</p>
+		</div>
+	`;
   return template;
 }
 
 ;
 /* harmony default export */ var TooltipTemplate_tooltip_template = (tooltip); // <p class="per100k">${helper.numberWithCommas(data['Doses per 100,000 people'])} vaccinations per 100,000 people</p>
 // EXTERNAL MODULE: ./src/js/components/canada-tilemap/canada-tilemap.css
-var canada_tilemap = __webpack_require__(174);
+var canada_tilemap = __webpack_require__(173);
 
 // CONCATENATED MODULE: ./src/js/components/canada-tilemap/canada-tilemap.js
 
@@ -327,7 +303,7 @@ function handleMouseout(d) {
   init: canada_tilemap_init
 });
 // EXTERNAL MODULE: ./src/data/canada-tilemap.json
-var data_canada_tilemap = __webpack_require__(89);
+var data_canada_tilemap = __webpack_require__(86);
 
 // CONCATENATED MODULE: ./src/index.js
 
@@ -426,11 +402,11 @@ src_init();
 
 /***/ }),
 
-/***/ 89:
+/***/ 86:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Yuk.\",\"code\":\"YT\"},{\"y\":5,\"x\":2.5,\"name\":\"Northwest Territories Territories\",\"abbr\":\"N.W.T.\",\"code\":\"NT\"},{\"y\":5,\"x\":3.5,\"name\":\"Nunavut\",\"abbr\":\"Nun.\",\"code\":\"NU\"},{\"y\":4,\"x\":1,\"name\":\"British Columbia\",\"abbr\":\"B.C.\",\"code\":\"BC\"},{\"y\":4,\"x\":2,\"name\":\"Alberta\",\"abbr\":\"Alta.\",\"code\":\"AB\"},{\"y\":4,\"x\":3,\"name\":\"Saskatchewan\",\"abbr\":\"Sask.\",\"code\":\"SK\"},{\"y\":4,\"x\":4,\"name\":\"Manitoba\",\"abbr\":\"Man.\",\"code\":\"MB\"},{\"y\":3.5,\"x\":5,\"name\":\"Ontario\",\"abbr\":\"Ont.\",\"code\":\"ON\"},{\"y\":3.5,\"x\":6,\"name\":\"Quebec\",\"abbr\":\"Que.\",\"code\":\"QC\"},{\"y\":4,\"x\":7,\"name\":\"Newfoundland and Labrador\",\"abbr\":\"N.L.\",\"code\":\"NL\"},{\"y\":2.5,\"x\":6,\"name\":\"New Brunswick\",\"abbr\":\"N.B.\",\"code\":\"NB\"},{\"y\":3,\"x\":7,\"name\":\"Prince Edward Island\",\"abbr\":\"P.E.I.\",\"code\":\"PE\"},{\"y\":2,\"x\":7,\"name\":\"Nova Scotia\",\"abbr\":\"N.S.\",\"code\":\"NS\"}]");
 
 /***/ })
 
-},[[175,1,2]]]);
+},[[174,1,2]]]);
