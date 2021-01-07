@@ -14,7 +14,7 @@ import helper from './js/helper-functions';
 // import config from './data/config.json';
 
 // DATA
-const variable = '% vaccinated';
+const variable = '% administered';
 const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
 
@@ -41,6 +41,7 @@ const init = async () => {
 
 
 function joinData(data, shapes) {
+	console.log(data, shapes)
 	// join by prov code
 	return shapes.map(s => {
 		const dataProps = data.filter(d => d.prov_code === s.code)[0];

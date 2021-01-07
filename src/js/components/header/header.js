@@ -6,7 +6,7 @@ const init = async (data, provCode) => {
 	const prov = data.filter(d => d.code === provCode)[0];
 
 	return `
-		<h1>${prov.name} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov['Doses administered']))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${prov['% vaccinated']}%</span> of the province.</h1>
+		<h1>${prov.name} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov['Doses administered']))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${prov['% administered']}%</span> of doses received from the federal government.</h1>
 	`;
 }
 
