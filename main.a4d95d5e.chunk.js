@@ -164,7 +164,7 @@ function tooltip(data, variable) {
   const template = `
 		<div class="tooltip-content">
 			<h4>${data.name}</h4>
-			<p class="doses">${helper_functions.numberWithCommas(data['Doses administered'])} doses have been administered – about ${data[variable]}% of the current supply.</p>
+			<p class="doses">At least ${helper_functions.numberWithCommas(data['Doses administered'])} doses have been administered – about ${data[variable]}% of the current supply.</p>
 		</div>
 	`;
   return template;
