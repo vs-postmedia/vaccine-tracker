@@ -11,12 +11,13 @@ import tilemap from './js/components/canada-tilemap/canada-tilemap.js';
 import provinces from './data/canada-tilemap.json';
 import helper from './js/helper-functions';
 // import map from './js/components/map/map';
-// import config from './data/config.json';
 
+
+// VARS
+const variable = 'pct_admin';
+const legendTitle = 'Doses used (%)';
 // DATA
-const variable = '% administered';
 const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
-
 
 
 const init = async () => {
@@ -35,13 +36,12 @@ const init = async () => {
 	header.innerHTML = headerCopy;
 
 	// build map
-	tilemap.init('#map', data, variable);
+	tilemap.init('#map', data, variable, legendTitle);
 	// map.init(vax, provinces);
 };
 
 
 function joinData(data, shapes) {
-	console.log(data, shapes)
 	// join by prov code
 	return shapes.map(s => {
 		const dataProps = data.filter(d => d.prov_code === s.code)[0];
@@ -56,9 +56,9 @@ function joinData(data, shapes) {
 
 function parseNumbers(data) {
 	data.forEach(d => {
-		d['% vaccinated'] = +d['% vaccinated'],
-		d['Doses administered'] = +d['Doses administered'],
-		d['Doses per 100,000'] = +d['Doses per 100,000']
+		d['doses_rx'] = +d['doses_rx'],
+		d['doses_admin'] = +d['doses_admin'],
+		d['doses_per100k'] = +d['doses_per100k']
 	});
 
 	return data;

@@ -5,6 +5,8 @@ import TooltipTemplate from '../TooltipTemplate/tooltip-template';
 // CSS
 import './canada-tilemap.css';
 
+const coloursArray = ['#D4DAEA','#AFBEDB','#829DC7', '#6D8EBF','#3C76B0','#0062A3'];
+
 let popup = Popup();
 const mobileBreakpoint = 500;
 const marginMobile = {top: 50, right: 30, bottom: 25, left: 25};
@@ -12,7 +14,7 @@ const marginWeb = {top: 50, right: 50, bottom: 50, left: 50};
 let windowWidth, shapeMultiplier, x, y, displayVariable;
 
 
-const init = async(el, data, metric) => {
+const init = async(el, data, metric, legendTitle) => {
 	displayVariable = metric;
 	const label = 'abbr'; // OR 'code'
 	const square = d3.symbol().type(d3.symbolSquare);
@@ -52,17 +54,13 @@ const init = async(el, data, metric) => {
     // add colours & a legend
     const scaleMax = d3.max(data, d => d[displayVariable]);
     const colours = assignColours(scaleMax);
-	addLegend(map, colours, `${Math.floor(scaleMax)}+`, displayVariable);
+	addLegend(map, colours, legendTitle, `${Math.floor(scaleMax)}+`, displayVariable);
 
     // set fill colour for shapes
     data.forEach(function(d) {
         d3.select(`#${d.code}`)
         	.style('fill', colours(d[displayVariable]));
     });
-
-    
-
-	console.log(data)
 }
 
 function addLabels(svg, data, label) {
@@ -76,14 +74,14 @@ function addLabels(svg, data, label) {
 			.attr('class', 'label')
 }
 
-function addLegend(svg, legendScale, scaleMax, displayVariable) {
+function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
 	const legend = d3.select('#map')
 		.append('div')
 		.attr('class', 'legend');
 	
 	legend.append('p')
 			.attr('class', 'legend-title')
-			.text(displayVariable);
+			.text(legendTitle);
 
 	legend.append('div')
 		.attr('class', 'legend-fill');
@@ -101,7 +99,7 @@ function assignColours(scaleMax) {
 	// colour scale (postmedia blue)
 	return d3.scaleQuantile()
 		.domain([0, scaleMax])
-		.range(['#D1D2D4','#D4DAEA','#AFBEDB','#829DC7','#3C76B0','#0062A3']);
+		.range(coloursArray);
 }
 
 function drawShapes(svg, data, square) {
