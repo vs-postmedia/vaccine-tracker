@@ -1,0 +1,150 @@
+#table-container {
+	margin: 0 auto;
+	max-width: 400px;
+}
+#table {
+	margin: 15px 0;
+	max-width: var(--max-width);
+	table-layout: fixed;
+}
+
+#table .province {
+	margin-bottom: 4px;
+}
+
+#table .row .container {
+	border-radius: 4px;
+	padding: 5px 3px;
+}
+#table .administered .metric:not(:first-child) p {
+	text-align: right;
+}
+
+#table .row,
+#table .metric-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+#table .row .received {
+	background-color: var(--blue06);
+	flex: 1 35%;
+	margin-right: 10px;
+}
+
+#table .row .received h4,
+#table .row .received .value {
+	color: var(--blue01);
+}
+#table .row .received .title {
+	color: var(--blue03);
+}
+
+/* We tell all items to be 100% width, via flex-basis */
+#table .row .administered {
+	background-color: var(--grey05);
+	flex: 2 100%;
+}
+
+#table .container h4 {
+	font-family: BentonSansCond-Bold;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+#table .metric-container > * {
+	flex: 1 100%;
+}
+
+
+#table .metric {
+	flex: 1 100%;
+	padding: 5px 3px;
+}
+
+#table .metric .title {
+	color: var(--grey02);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+
+
+
+#table-container thead {
+	border-bottom: 1px solid var(--grey04);
+}
+
+#table-container thead th,
+#table-container tbody td {
+	text-align: right;
+	vertical-align: top;
+}
+#table-container thead th {
+	padding: 0 3px;
+	vertical-align: bottom;
+}
+
+
+#table-container thead tr {
+	border-bottom: 2px solid var(--grey04);
+	font-family: BentonSansCond-RegItalic;
+	font-size: 0.9rem;
+	padding-bottom: 15px;
+}
+
+#table-container tr {
+	border-bottom: 1px solid var(--grey04);
+}
+
+#table-container td {
+	font-family: BentonSansCond-Regular;
+	font-size: 0.8rem;
+	padding: 0.5rem 3px;
+	width: 20%;
+}
+
+#table-container .province {
+	text-align: left;
+}
+
+
+/* cell text colour */
+#table-container .pct_admin p {
+	color: #FFF;
+}
+
+
+#table-container .hide-mobile {
+	display: none;
+}
+
+/* cell backgrounds */
+#table-container td.pct_admin.weight-1 {
+	background-color: var(--blue01);
+}
+#table-container td.pct_admin.weight-2 {
+	background-color: var(--blue02);
+}
+#table-container td.pct_admin.weight-3 {
+	background-color: var(--blue03);
+}
+#table-container td.pct_admin.weight-4 {
+	background-color: var(--blue04);
+}
+#table-container td.pct_admin.weight-5 {
+	background-color: var(--blue05);
+}
+
+
+
+
+
+@media only screen and (min-width: 500px) {
+    #table-container .hide-mobile {
+		display: block;
+	}
+	#table-container tbody .province {
+		font-size: 1.1rem;
+		width: 30%;
+	}
+}

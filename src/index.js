@@ -7,6 +7,7 @@ import './css/main.css';
 // JS
 import * as d3 from 'd3';
 import head from './js/components/header/header';
+import table from './js/components/table/table';
 import tilemap from './js/components/canada-tilemap/canada-tilemap.js';
 import provinces from './data/canada-tilemap.json';
 import helper from './js/helper-functions';
@@ -22,7 +23,8 @@ const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/
 
 const init = async () => {
 	const header = document.querySelector('#header');
-	const provCode = helper.getPrCode();
+	const provCode = helper.getUrlParam('prov');
+	const format = helper.getUrlParam('format');
 
 	// vaccination data
 	const vax = await d3.csv(vaxDataUrl);
@@ -31,13 +33,19 @@ const init = async () => {
 	// load province shapes
 	// const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
 
-	// build header
-	const headerCopy = await head.init(data, provCode, variable);
-	header.innerHTML = headerCopy;
+	// is it a table or a map?
+	if (format === 'TABLE') {
+		const sorted = data.sort((a,b) => b.pct_admin - a.pct_admin);
+		table.init(sorted, '#table');
+	} else {
+		// build header
+		const headerCopy = await head.init(data, provCode, variable);
+		header.innerHTML = headerCopy;
 
-	// build map
-	tilemap.init('#map', data, variable, legendTitle);
-	// map.init(vax, provinces);
+		// build map
+		tilemap.init('#map', data, variable, legendTitle);
+		// map.init(vax, provinces);
+	}
 };
 
 

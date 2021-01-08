@@ -1,13 +1,18 @@
 const helper = {
-	getPrCode() {
-		const defaultPrCode = 'BC';
+	getUrlParam(param) {
+		const defaultResult = null;
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
-		const prCode = urlParams.get('prov');
+		let paramValue = urlParams.get(param);
 
-		// is there a code?
-		const code = prCode ? prCode.toUpperCase() : defaultPrCode;
-		return this.validProvinceCodes.includes(code) ? code : defaultPrCode;
+		// is there a value?
+		paramValue = paramValue ? paramValue.toUpperCase() : defaultResult;
+
+		// check if the province is a value province code
+		if (param === 'prov') {
+			paramValue = this.validProvinceCodes.includes(paramValue) ? paramValue : 'BC';
+		}
+		return paramValue
 	},
 	map(num, in_min, in_max, out_min, out_max) {
 		return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
