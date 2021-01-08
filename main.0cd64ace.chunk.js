@@ -1,62 +1,34 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 101:
+/***/ 112:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Yuk.\",\"code\":\"YT\"},{\"y\":5,\"x\":2.5,\"name\":\"Northwest Territories\",\"abbr\":\"N.W.T.\",\"code\":\"NT\"},{\"y\":5,\"x\":3.5,\"name\":\"Nunavut\",\"abbr\":\"Nun.\",\"code\":\"NU\"},{\"y\":4,\"x\":1,\"name\":\"British Columbia\",\"abbr\":\"B.C.\",\"code\":\"BC\"},{\"y\":4,\"x\":2,\"name\":\"Alberta\",\"abbr\":\"Alta.\",\"code\":\"AB\"},{\"y\":4,\"x\":3,\"name\":\"Saskatchewan\",\"abbr\":\"Sask.\",\"code\":\"SK\"},{\"y\":4,\"x\":4,\"name\":\"Manitoba\",\"abbr\":\"Man.\",\"code\":\"MB\"},{\"y\":3.5,\"x\":5,\"name\":\"Ontario\",\"abbr\":\"Ont.\",\"code\":\"ON\"},{\"y\":3.5,\"x\":6,\"name\":\"Quebec\",\"abbr\":\"Que.\",\"code\":\"QC\"},{\"y\":4,\"x\":7,\"name\":\"Newfoundland and Labrador\",\"abbr\":\"N.L.\",\"code\":\"NL\"},{\"y\":2.5,\"x\":6,\"name\":\"New Brunswick\",\"abbr\":\"N.B.\",\"code\":\"NB\"},{\"y\":3,\"x\":7,\"name\":\"Prince Edward Island\",\"abbr\":\"P.E.I.\",\"code\":\"PE\"},{\"y\":2,\"x\":7,\"name\":\"Nova Scotia\",\"abbr\":\"N.S.\",\"code\":\"NS\"}]");
 
 /***/ }),
 
-/***/ 154:
+/***/ 163:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 155:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 156:
+/***/ 165:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 157:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 184:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 185:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 186:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 187:
+/***/ 166:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -64,6 +36,34 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 /***/ }),
 
 /***/ 188:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 199:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 200:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,87 +71,87 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(65);
+var es_array_filter = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(50);
+var es_array_for_each = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(151);
+var es_array_map = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.sort.js
-var es_array_sort = __webpack_require__(152);
+var es_array_sort = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__(153);
+var es_object_assign = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(51);
+var web_dom_collections_for_each = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
 var regenerator = __webpack_require__(7);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(22);
+var runtime = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(12);
+var asyncToGenerator = __webpack_require__(14);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(154);
+var normalize = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(155);
+var colors = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(156);
+var fonts = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(157);
+var main = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
-var d3 = __webpack_require__(3);
+var d3 = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
-var es_array_concat = __webpack_require__(32);
+var es_array_concat = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(52);
+var es_function_name = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
-var es_array_includes = __webpack_require__(158);
+var es_array_includes = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(54);
+var es_array_iterator = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(163);
+var es_object_to_string = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(94);
+var es_regexp_exec = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__(166);
+var es_regexp_to_string = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.includes.js
-var es_string_includes = __webpack_require__(167);
+var es_string_includes = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__(96);
+var es_string_iterator = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(171);
+var es_string_replace = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
-var es_string_search = __webpack_require__(173);
+var es_string_search = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
-var web_dom_collections_iterator = __webpack_require__(175);
+var web_dom_collections_iterator = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.js
-var web_url = __webpack_require__(176);
+var web_url = __webpack_require__(183);
 
 // CONCATENATED MODULE: ./src/js/helper-functions.js
 
@@ -191,7 +191,7 @@ var helper = {
 };
 /* harmony default export */ var helper_functions = (helper);
 // EXTERNAL MODULE: ./src/js/components/header/header.css
-var header_header = __webpack_require__(184);
+var header_header = __webpack_require__(188);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
@@ -231,8 +231,15 @@ var init = /*#__PURE__*/function () {
 /* harmony default export */ var components_header_header = ({
   init: init
 });
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
+var es_promise = __webpack_require__(189);
+
+// EXTERNAL MODULE: ./node_modules/papaparse/papaparse.min.js
+var papaparse_min = __webpack_require__(111);
+var papaparse_min_default = /*#__PURE__*/__webpack_require__.n(papaparse_min);
+
 // EXTERNAL MODULE: ./src/js/components/table/table.css
-var table = __webpack_require__(185);
+var table = __webpack_require__(199);
 
 // CONCATENATED MODULE: ./src/js/components/table/table.js
 
@@ -243,30 +250,55 @@ var table = __webpack_require__(185);
 
 
 
+
+
+
+
  // VARS
 
+var table_copy;
 var tableRows = '';
 var responsiveBreakpoint = 500;
+var copyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2cMRSXnkjEZqYJKqsr3q_rNUOb9_LC4CFRe6qWT2M6nuol0GwXWR7J0U_I6HxCxxilHJtyNjyOEDI/pub?gid=0&single=true&output=csv';
 
 var table_init = /*#__PURE__*/function () {
   var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, el) {
+    var copy;
     return regenerator_default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return getCopy(copyUrl);
+
+          case 3:
+            copy = _context.sent;
+            _context.next = 9;
+            break;
+
+          case 6:
+            _context.prev = 6;
+            _context.t0 = _context["catch"](0);
+            console.log(_context.t0);
+
+          case 9:
             // build the table rows
             data.forEach(function (d) {
+              d.copy = copy.data.filter(function (c) {
+                return c.code === d.code;
+              })[0].text;
               tableRows += rowTemplate(d);
             }); // add table to document
 
             document.querySelector(el).innerHTML = tableRows;
 
-          case 2:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee);
+    }, _callee, null, [[0, 6]]);
   }));
 
   return function init(_x, _x2) {
@@ -274,18 +306,33 @@ var table_init = /*#__PURE__*/function () {
   };
 }();
 
+function getCopy(url) {
+  return new Promise(function (resolve, reject) {
+    papaparse_min_default.a.parse(url, {
+      download: true,
+      header: true,
+      complete: function complete(results) {
+        return resolve(results);
+      },
+      error: function error(err) {
+        return reject(err);
+      }
+    });
+  });
+}
+
 function rowTemplate(d) {
-  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses Received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>Shots given</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">% used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(d.pct_admin, "%</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_per100k), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
+  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\t\t<p class=\"copy\">").concat(d.copy, "</p>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>Doses administered</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">% used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(d.pct_admin, "%</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_per100k), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
 }
 
 /* harmony default export */ var table_table = ({
   init: table_init
 });
 // EXTERNAL MODULE: ./node_modules/@flourish/popup/src/index.js + 5 modules
-var src = __webpack_require__(102);
+var src = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./src/js/components/TooltipTemplate/tooltip-template.css
-var tooltip_template = __webpack_require__(186);
+var tooltip_template = __webpack_require__(200);
 
 // CONCATENATED MODULE: ./src/js/components/TooltipTemplate/tooltip-template.js
 
@@ -301,7 +348,7 @@ function tooltip(data, variable) {
 ;
 /* harmony default export */ var TooltipTemplate_tooltip_template = (tooltip); // <p class="per100k">${helper.numberWithCommas(data['Doses per 100,000 people'])} vaccinations per 100,000 people</p>
 // EXTERNAL MODULE: ./src/js/components/canada-tilemap/canada-tilemap.css
-var canada_tilemap = __webpack_require__(187);
+var canada_tilemap = __webpack_require__(201);
 
 // CONCATENATED MODULE: ./src/js/components/canada-tilemap/canada-tilemap.js
 
@@ -431,7 +478,7 @@ function handleMouseout(d) {
   init: canada_tilemap_init
 });
 // EXTERNAL MODULE: ./src/data/canada-tilemap.json
-var data_canada_tilemap = __webpack_require__(101);
+var data_canada_tilemap = __webpack_require__(112);
 
 // CONCATENATED MODULE: ./src/index.js
 
@@ -454,8 +501,7 @@ var data_canada_tilemap = __webpack_require__(101);
 
 
 
- // import map from './js/components/map/map';
-// VARS
+ // VARS
 
 var src_variable = 'pct_admin';
 var src_legendTitle = 'Doses used (%)'; // DATA
@@ -483,9 +529,7 @@ var src_init = /*#__PURE__*/function () {
 
           case 8:
             joinedData = _context.sent;
-            data = parseNumbers(joinedData); // load province shapes
-            // const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
-            // is it a table or a map?
+            data = parseNumbers(joinedData); // is it a table or a map?
 
             if (!(format === 'TABLE')) {
               _context.next = 15;
@@ -507,7 +551,7 @@ var src_init = /*#__PURE__*/function () {
             headerCopy = _context.sent;
             header.innerHTML = headerCopy; // build map
 
-            canada_tilemap_canada_tilemap.init('#map', data, src_variable, src_legendTitle); // map.init(vax, provinces);
+            canada_tilemap_canada_tilemap.init('#map', data, src_variable, src_legendTitle);
 
           case 20:
           case "end":
@@ -546,4 +590,4 @@ src_init();
 
 /***/ })
 
-},[[188,1,2]]]);
+},[[202,1,2]]]);
