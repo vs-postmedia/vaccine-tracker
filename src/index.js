@@ -11,7 +11,6 @@ import table from './js/components/table/table';
 import tilemap from './js/components/canada-tilemap/canada-tilemap.js';
 import provinces from './data/canada-tilemap.json';
 import helper from './js/helper-functions';
-// import map from './js/components/map/map';
 
 
 // VARS
@@ -30,8 +29,6 @@ const init = async () => {
 	const vax = await d3.csv(vaxDataUrl);
 	const joinedData = await joinData(vax, provinces);
 	const data = parseNumbers(joinedData);
-	// load province shapes
-	// const provinces = await d3.json('https://vs-postmedia-data.sfo2.digitaloceanspaces.com/maps/canada_provinces.topojson');
 
 	// is it a table or a map?
 	if (format === 'TABLE') {
@@ -44,7 +41,6 @@ const init = async () => {
 
 		// build map
 		tilemap.init('#map', data, variable, legendTitle);
-		// map.init(vax, provinces);
 	}
 };
 
