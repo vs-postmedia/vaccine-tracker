@@ -32,7 +32,7 @@ const init = async () => {
 
 	// is it a table or a map?
 	if (format === 'TABLE') {
-		const sorted = data.sort((a,b) => b.pct_admin - a.pct_admin);
+		const sorted = data.sort((a,b) => b.doses_per100k - a.doses_per100k);
 		table.init(sorted, '#table');
 	} else {
 		// build header
