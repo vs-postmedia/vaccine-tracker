@@ -35,7 +35,7 @@
 
 #table .row .received {
 	background-color: var(--blue06);
-	flex: 1 35%;
+	/*flex: 1 35%;*/
 	margin-right: 10px;
 }
 
@@ -50,7 +50,8 @@
 /* We tell all items to be 100% width, via flex-basis */
 #table .row .administered {
 	background-color: var(--grey05);
-	flex: 2 100%;
+	/*flex: 2 100%;*/
+	flex-grow: 2;
 }
 
 #table .container h4 {
@@ -58,16 +59,18 @@
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
-#table .metric-container > * {
+/*#table .metric-container > * {
 	flex: 1 100%;
-}
+}*/
 
 
 #table .metric {
-	flex: 1 100%;
+	/*flex: 1 100%;*/
 	padding: 5px 3px;
 }
-
+#table .metric:first-child {
+	flex: 2 25%;
+}
 #table .metric .title {
 	color: var(--grey02);
 	font-size: 0.8rem;
