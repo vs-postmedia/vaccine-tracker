@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import Popup from '@flourish/popup';
+import Helper from '../../helper-functions';
 import TooltipTemplate from '../TooltipTemplate/tooltip-template';
 
 // CSS
@@ -92,7 +93,7 @@ function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
 
 	legend.append('p')
 			.attr('class', 'legend-value legend-value-right')
-			.text(scaleMax);
+			.text(Helper.numberWithCommas(scaleMax));
 }
 
 function assignColours(scaleMax) {

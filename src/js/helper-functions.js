@@ -21,7 +21,7 @@ const helper = {
 	numberWithCommas(x) {
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 	},
-	validProvinceCodes: ['YT','NT','NU','BC','AB','SK','MB','ON','QC','NL','NB','PE','NS']
+	validProvinceCodes: ['YT','NT','NU','BC','AB','SK','MB','ON','QC','NL','NB','PE','NS', 'CA']
 };
 
 export default helper;

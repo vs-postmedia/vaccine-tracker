@@ -14,8 +14,12 @@ import helper from './js/helper-functions';
 
 
 // VARS
-const variable = 'pct_admin';
-const legendTitle = 'Doses used (%)';
+const variable = 'doses_per100k';
+const legendTitle = 'Shots given per 100,000';
+// const variable = 'pct_admin';
+// const legendTitle = 'Doses used (%)';
+
+
 // DATA
 const vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
@@ -36,7 +40,7 @@ const init = async () => {
 		table.init(sorted, '#table');
 	} else {
 		// build header
-		const headerCopy = await head.init(data, provCode, variable);
+		const headerCopy = await head.init(data, provCode);
 		header.innerHTML = headerCopy;
 
 		// build map
