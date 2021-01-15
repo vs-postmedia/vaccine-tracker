@@ -12,3 +12,8 @@
 .flourish-popup h4 {
 	font-family: BentonSansCond-Bold;
 }
+
+.green {
+	color: var(--green01);
+	font-family: BentonSansCond-Bold;
+}
