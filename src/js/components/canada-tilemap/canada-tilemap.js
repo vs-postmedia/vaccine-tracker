@@ -93,7 +93,7 @@ function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
 
 	legend.append('p')
 			.attr('class', 'legend-value legend-value-right')
-			.text(Helper.numberWithCommas(scaleMax));
+			.text(`${Helper.numberWithCommas(Math.round(parseInt(scaleMax) / 100) * 100)}+`);
 }
 
 function assignColours(scaleMax) {
