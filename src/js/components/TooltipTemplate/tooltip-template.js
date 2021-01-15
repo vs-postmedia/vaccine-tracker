@@ -15,5 +15,3 @@ function tooltip(data, variable) {
 
 export default tooltip;
 
-
-// <p class="per100k">${helper.numberWithCommas(data['Doses per 100,000 people'])} vaccinations per 100,000 people</p>
