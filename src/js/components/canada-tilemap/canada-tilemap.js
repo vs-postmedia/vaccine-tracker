@@ -5,7 +5,7 @@ import TooltipTemplate from '../TooltipTemplate/tooltip-template';
 // CSS
 import './canada-tilemap.css';
 
-const coloursArray = ['#D4DAEA','#AFBEDB','#829DC7', '#6D8EBF','#3C76B0','#0062A3'];
+const coloursArray = ['#C5DBD2','#a4cabc','#84BBA8', '#62AD95','#34A185','#009775'];
 
 let popup = Popup();
 const mobileBreakpoint = 500;

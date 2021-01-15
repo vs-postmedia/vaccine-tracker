@@ -27,7 +27,7 @@
 	font-size: 0.9rem;
 }
 #map .legend-fill {
-	background: linear-gradient(to right, #D4DAEA 20%, #AFBEDB 40%, #829DC7 60%, #3C76B0 80%, #0062A3 100%);
+	background: linear-gradient(to right, #C5DBD2 20%, #84BBA8 40%, #62AD95 60%, #34A185 80%, #009775 100%);
 	height: 15px;
 }
 #map .legend-value {

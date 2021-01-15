@@ -1,3 +1,6 @@
+.flourish-popup {
+	max-width: 255px;
+}
 .flourish-popup p,
 .flourish-popup h4 {
 	font-family: BentonSansCond-Regular;

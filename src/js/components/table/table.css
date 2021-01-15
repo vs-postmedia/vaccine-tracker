@@ -34,17 +34,17 @@
 }
 
 #table .row .received {
-	background-color: var(--blue06);
+	background-color: var(--green06);
 	/*flex: 1 35%;*/
 	margin-right: 10px;
 }
 
 #table .row .received h4,
 #table .row .received .value {
-	color: var(--blue01);
+	color: var(--green01);
 }
 #table .row .received .title {
-	color: var(--blue03);
+	color: var(--green03);
 }
 
 /* We tell all items to be 100% width, via flex-basis */
