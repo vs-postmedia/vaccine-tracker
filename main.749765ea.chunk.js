@@ -71,10 +71,10 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(44);
+var es_array_filter = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(57);
+var es_array_for_each = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
 var es_array_map = __webpack_require__(160);
@@ -86,17 +86,17 @@ var es_array_sort = __webpack_require__(161);
 var es_object_assign = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(58);
+var web_dom_collections_for_each = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(7);
+var regenerator = __webpack_require__(19);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(26);
+var runtime = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(14);
+var asyncToGenerator = __webpack_require__(34);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
@@ -114,23 +114,17 @@ var main = __webpack_require__(166);
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
 var d3 = __webpack_require__(4);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
-var es_array_concat = __webpack_require__(35);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(59);
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
 var es_array_includes = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(61);
+var es_array_iterator = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(98);
+var es_object_to_string = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(99);
+var es_regexp_exec = __webpack_require__(96);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
 var es_regexp_to_string = __webpack_require__(173);
@@ -139,7 +133,7 @@ var es_regexp_to_string = __webpack_require__(173);
 var es_string_includes = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__(101);
+var es_string_iterator = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
 var es_string_replace = __webpack_require__(178);
@@ -195,42 +189,24 @@ var header_header = __webpack_require__(188);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
-
-
-
-
-
-
  // import template from 'header-template';
 
-var init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, provCode) {
-    var prov;
-    return regenerator_default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            prov = data.filter(function (d) {
-              return d.code === provCode;
-            })[0];
-            return _context.abrupt("return", "\n\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov.doses_admin)), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(prov.pct_admin, "%</span> of the supply received from the federal government.</h1>\n\t"));
-
-          case 2:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function init(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();
+const init = async (data, provCode) => {
+  const prov = data.filter(d => d.code === provCode)[0];
+  return `
+		<h1>${prov.name} has administered <span class="highlight">${helper_functions.numberWithCommas(parseInt(prov.doses_admin))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${Math.round(prov.pct_admin)}%</span> of the supply received from the federal government.</h1>
+	`;
+};
 
 /* harmony default export */ var components_header_header = ({
-  init: init
+  init
 });
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
+var es_array_concat = __webpack_require__(106);
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__(107);
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
 var es_promise = __webpack_require__(189);
 
@@ -353,99 +329,65 @@ var canada_tilemap = __webpack_require__(201);
 // CONCATENATED MODULE: ./src/js/components/canada-tilemap/canada-tilemap.js
 
 
-
-
-
-
-
-
  // CSS
 
 
-var coloursArray = ['#D4DAEA', '#AFBEDB', '#829DC7', '#6D8EBF', '#3C76B0', '#0062A3'];
-var popup = Object(src["a" /* default */])();
-var mobileBreakpoint = 500;
-var marginMobile = {
+const coloursArray = ['#C5DBD2', '#a4cabc', '#84BBA8', '#62AD95', '#34A185', '#009775'];
+let popup = Object(src["a" /* default */])();
+const mobileBreakpoint = 500;
+const marginMobile = {
   top: 50,
   right: 30,
   bottom: 25,
   left: 25
 };
-var marginWeb = {
+const marginWeb = {
   top: 50,
   right: 50,
   bottom: 50,
   left: 50
 };
-var windowWidth, shapeMultiplier, x, y, canada_tilemap_displayVariable;
+let windowWidth, shapeMultiplier, x, y, canada_tilemap_displayVariable;
 
-var canada_tilemap_init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(el, data, metric, legendTitle) {
-    var label, square, margin, height, width, svg, scaleMax, colours;
-    return regenerator_default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            canada_tilemap_displayVariable = metric;
-            label = 'abbr'; // OR 'code'
+const canada_tilemap_init = async (el, data, metric, legendTitle) => {
+  canada_tilemap_displayVariable = metric;
+  const label = 'abbr'; // OR 'code'
 
-            square = d3["g" /* symbol */]().type(d3["h" /* symbolSquare */]); // calculations to jankily adjust map dimensions
+  const square = d3["g" /* symbol */]().type(d3["h" /* symbolSquare */]); // calculations to jankily adjust map dimensions
 
-            windowWidth = document.querySelector(el).offsetWidth;
-            shapeMultiplier = windowWidth < mobileBreakpoint ? 6 : 12;
-            margin = windowWidth < mobileBreakpoint ? marginMobile : marginWeb;
-            height = windowWidth * 0.4;
-            width = windowWidth * 0.8; // scales
+  windowWidth = document.querySelector(el).offsetWidth;
+  shapeMultiplier = windowWidth < mobileBreakpoint ? 6 : 12;
+  const margin = windowWidth < mobileBreakpoint ? marginMobile : marginWeb;
+  const height = windowWidth * 0.4;
+  const width = windowWidth * 0.8; // scales
 
-            x = d3["d" /* scaleLinear */]().range([0, width]);
-            y = d3["d" /* scaleLinear */]().range([height, 0]); // Compute the scales’ domains.
+  x = d3["d" /* scaleLinear */]().range([0, width]);
+  y = d3["d" /* scaleLinear */]().range([height, 0]); // Compute the scales’ domains.
 
-            x.domain(d3["b" /* extent */](data, function (d) {
-              return d.x;
-            })).nice();
-            y.domain(d3["b" /* extent */](data, function (d) {
-              return d.y;
-            })).nice(); // SVG
+  x.domain(d3["b" /* extent */](data, d => d.x)).nice();
+  y.domain(d3["b" /* extent */](data, d => d.y)).nice(); // SVG
 
-            svg = d3["f" /* select */]('#map').append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom + 10).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // add shapes
+  const svg = d3["f" /* select */]('#map').append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom + 10).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // add shapes
 
-            drawShapes(svg, data, square); // add labels
+  drawShapes(svg, data, square); // add labels
 
-            addLabels(svg, data, label); // add colours & a legend
+  addLabels(svg, data, label); // add colours & a legend
 
-            scaleMax = d3["c" /* max */](data, function (d) {
-              return d[canada_tilemap_displayVariable];
-            });
-            colours = assignColours(scaleMax);
-            addLegend(map, colours, legendTitle, "".concat(Math.floor(scaleMax), "+"), canada_tilemap_displayVariable); // set fill colour for shapes
+  const scaleMax = d3["c" /* max */](data, d => d[canada_tilemap_displayVariable]);
+  const colours = assignColours(scaleMax);
+  addLegend(map, colours, legendTitle, `${Math.floor(scaleMax)}+`, canada_tilemap_displayVariable); // set fill colour for shapes
 
-            data.forEach(function (d) {
-              d3["f" /* select */]("#".concat(d.code)).style('fill', colours(d[canada_tilemap_displayVariable]));
-            });
-
-          case 19:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function init(_x, _x2, _x3, _x4) {
-    return _ref.apply(this, arguments);
-  };
-}();
+  data.forEach(function (d) {
+    d3["f" /* select */](`#${d.code}`).style('fill', colours(d[canada_tilemap_displayVariable]));
+  });
+};
 
 function addLabels(svg, data, label) {
-  svg.append('g').attr('class', 'labels').selectAll('labels').data(data).enter().append('text').attr('transform', function (d) {
-    return "translate(".concat(x(d.x), ",").concat(y(d.y), ")");
-  }).text(function (d) {
-    return d[label];
-  }).attr('class', 'label');
+  svg.append('g').attr('class', 'labels').selectAll('labels').data(data).enter().append('text').attr('transform', d => `translate(${x(d.x)},${y(d.y)})`).text(d => d[label]).attr('class', 'label');
 }
 
 function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
-  var legend = d3["f" /* select */]('#map').append('div').attr('class', 'legend');
+  const legend = d3["f" /* select */]('#map').append('div').attr('class', 'legend');
   legend.append('p').attr('class', 'legend-title').text(legendTitle);
   legend.append('div').attr('class', 'legend-fill');
   legend.append('p').attr('class', 'legend-value legend-value-left').text('0');
@@ -459,11 +401,7 @@ function assignColours(scaleMax) {
 
 function drawShapes(svg, data, square) {
   // Add the points/shapes
-  svg.append('g').attr('class', 'shapes').selectAll('prov').data(data).enter().append('path').attr('id', function (d) {
-    return d.code;
-  }).attr('class', 'prov').attr('d', square.size(windowWidth * shapeMultiplier)).attr('transform', function (d) {
-    return "translate(".concat(x(d.x), ",").concat(y(d.y), ")");
-  }).on('mouseover', handleMouseenter).on('mouseout', handleMouseout);
+  svg.append('g').attr('class', 'shapes').selectAll('prov').data(data).enter().append('path').attr('id', d => d.code).attr('class', 'prov').attr('d', square.size(windowWidth * shapeMultiplier)).attr('transform', d => `translate(${x(d.x)},${y(d.y)})`).on('mouseover', handleMouseenter).on('mouseout', handleMouseout);
 }
 
 function handleMouseenter(d) {
@@ -537,7 +475,7 @@ var src_init = /*#__PURE__*/function () {
             }
 
             sorted = data.sort(function (a, b) {
-              return b.pct_admin - a.pct_admin;
+              return b.doses_per100k - a.doses_per100k;
             });
             table_table.init(sorted, '#table');
             _context.next = 20;
