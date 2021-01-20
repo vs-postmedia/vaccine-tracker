@@ -1,9 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 112:
+/***/ 111:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Yuk.\",\"code\":\"YT\"},{\"y\":5,\"x\":2.5,\"name\":\"Northwest Territories\",\"abbr\":\"N.W.T.\",\"code\":\"NT\"},{\"y\":5,\"x\":3.5,\"name\":\"Nunavut\",\"abbr\":\"Nun.\",\"code\":\"NU\"},{\"y\":4,\"x\":1,\"name\":\"British Columbia\",\"abbr\":\"B.C.\",\"code\":\"BC\"},{\"y\":4,\"x\":2,\"name\":\"Alberta\",\"abbr\":\"Alta.\",\"code\":\"AB\"},{\"y\":4,\"x\":3,\"name\":\"Saskatchewan\",\"abbr\":\"Sask.\",\"code\":\"SK\"},{\"y\":4,\"x\":4,\"name\":\"Manitoba\",\"abbr\":\"Man.\",\"code\":\"MB\"},{\"y\":3.5,\"x\":5,\"name\":\"Ontario\",\"abbr\":\"Ont.\",\"code\":\"ON\"},{\"y\":3.5,\"x\":6,\"name\":\"Quebec\",\"abbr\":\"Que.\",\"code\":\"QC\"},{\"y\":4,\"x\":7,\"name\":\"Newfoundland and Labrador\",\"abbr\":\"Nfld.\",\"code\":\"NL\"},{\"y\":2.5,\"x\":6,\"name\":\"New Brunswick\",\"abbr\":\"N.B.\",\"code\":\"NB\"},{\"y\":3,\"x\":7,\"name\":\"Prince Edward Island\",\"abbr\":\"P.E.I.\",\"code\":\"PE\"},{\"y\":2,\"x\":7,\"name\":\"Nova Scotia\",\"abbr\":\"N.S.\",\"code\":\"NS\"}]");
+
+/***/ }),
+
+/***/ 162:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -28,14 +35,7 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 
 /***/ }),
 
-/***/ 166:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 188:
+/***/ 187:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -71,87 +71,81 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(43);
+var es_array_filter = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(56);
+var es_array_for_each = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(160);
+var es_array_map = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.sort.js
-var es_array_sort = __webpack_require__(161);
+var es_array_sort = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__(162);
+var es_object_assign = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(57);
+var web_dom_collections_for_each = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(7);
+var regenerator = __webpack_require__(11);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(26);
+var runtime = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(14);
+var asyncToGenerator = __webpack_require__(20);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(163);
+var normalize = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(164);
+var colors = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(165);
+var fonts = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(166);
+var main = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
 var d3 = __webpack_require__(4);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
-var es_array_concat = __webpack_require__(58);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(90);
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
-var es_array_includes = __webpack_require__(167);
+var es_array_includes = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(60);
+var es_array_iterator = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(98);
+var es_object_to_string = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(99);
+var es_regexp_exec = __webpack_require__(96);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__(173);
+var es_regexp_to_string = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.includes.js
-var es_string_includes = __webpack_require__(174);
+var es_string_includes = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__(101);
+var es_string_iterator = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(178);
+var es_string_replace = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
-var es_string_search = __webpack_require__(180);
+var es_string_search = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
-var web_dom_collections_iterator = __webpack_require__(182);
+var web_dom_collections_iterator = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.js
-var web_url = __webpack_require__(183);
+var web_url = __webpack_require__(182);
 
 // CONCATENATED MODULE: ./src/js/helper-functions.js
 
@@ -191,58 +185,41 @@ var helper = {
 };
 /* harmony default export */ var helper_functions = (helper);
 // EXTERNAL MODULE: ./src/js/components/header/header.css
-var header_header = __webpack_require__(188);
+var header_header = __webpack_require__(187);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
-
-
-
-
-
-
  // import template from 'header-template';
 
-var init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, provCode) {
-    var header, prov;
-    return regenerator_default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            prov = data.filter(function (d) {
-              return d.code === provCode;
-            })[0];
+const init = async (data, provCode) => {
+  let header;
+  const prov = data.filter(d => d.code === provCode)[0];
 
-            if (provCode !== 'CA') {
-              header = "\n\t\t\t<h1>".concat(prov.name, " has administered <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov.doses_admin)), " doses</span> of COVID-19 vaccines so far \u2013 roughly <span class=\"highlight\">").concat(Math.round(prov.pct_admin), "%</span> of the supply received from the federal government.</h1>\n\t\t");
-            } else {
-              header = '<h1>Per cent of available vaccine supply used in each province</h1>';
-            }
+  if (provCode !== 'CA') {
+    header = `
+			<h1>${prov.name} has administered <span class="highlight">${helper_functions.numberWithCommas(parseInt(prov.doses_admin))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${Math.round(prov.pct_admin)}%</span> of the supply received from the federal government.</h1>
+		`;
+  } else {
+    header = '<h1>Doses of COVID-19 vaccine given per 100,000 people</h1>';
+  }
 
-            return _context.abrupt("return", header);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function init(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();
+  return header;
+};
 
 /* harmony default export */ var components_header_header = ({
-  init: init
+  init
 });
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
+var es_array_concat = __webpack_require__(106);
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__(188);
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
 var es_promise = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/papaparse/papaparse.min.js
-var papaparse_min = __webpack_require__(111);
+var papaparse_min = __webpack_require__(110);
 var papaparse_min_default = /*#__PURE__*/__webpack_require__.n(papaparse_min);
 
 // EXTERNAL MODULE: ./src/js/components/table/table.css
@@ -336,7 +313,7 @@ function rowTemplate(d) {
   init: table_init
 });
 // EXTERNAL MODULE: ./node_modules/@flourish/popup/src/index.js + 5 modules
-var src = __webpack_require__(113);
+var src = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./src/js/components/TooltipTemplate/tooltip-template.css
 var tooltip_template = __webpack_require__(200);
@@ -489,7 +466,7 @@ function handleMouseout(d) {
   init: canada_tilemap_init
 });
 // EXTERNAL MODULE: ./src/data/canada-tilemap.json
-var data_canada_tilemap = __webpack_require__(112);
+var data_canada_tilemap = __webpack_require__(111);
 
 // CONCATENATED MODULE: ./src/index.js
 
