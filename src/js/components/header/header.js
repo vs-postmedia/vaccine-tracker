@@ -11,7 +11,7 @@ const init = async (data, provCode) => {
 			<h1>${prov.name} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov.doses_admin))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${Math.round(prov.pct_admin)}%</span> of the supply received from the federal government.</h1>
 		`;
 	} else {
-		header = '<h1>Per cent of available vaccine supply used in each province</h1>'
+		header = '<h1>Doses of COVID-19 vaccine given per 100,000 people</h1>'
 	}
 
 	return header;
