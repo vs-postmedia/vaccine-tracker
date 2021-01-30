@@ -14,6 +14,7 @@ import helper from './js/helper-functions';
 
 
 // VARS
+const tableSortMetric = 'full_vax_per100k';
 const variable = 'doses_per100k';
 const legendTitle = 'Shots given per 100,000';
 // const variable = 'pct_admin';
@@ -36,7 +37,7 @@ const init = async () => {
 
 	// is it a table or a map?
 	if (format === 'TABLE') {
-		const sorted = data.sort((a,b) => b.doses_per100k - a.doses_per100k);
+		const sorted = data.sort((a,b) => b[tableSortMetric] - a[tableSortMetric]);
 		table.init(sorted, '#table');
 	} else {
 		// build header

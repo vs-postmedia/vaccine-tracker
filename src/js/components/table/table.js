@@ -55,19 +55,20 @@ function rowTemplate(d) {
 			</div>
 
 			<div class="container administered">
-				<h4>Doses administered</h4>
+				<h4>People vaccinated</h4>
 				<div class="metric-container">
 					<div class="metric">
-						<p class="title">Used</p>
+						<p class="title">Per 100,000 (fully)</p>
+						<p class="value">${helper.numberWithCommas(d.full_vax_per100k)}</p>
+					</div>
+
+					<div class="metric">
+						<p class="title">Fully</p>
+						<p class="value">${helper.numberWithCommas(d.full_vax)}</p>
+					</div>
+					<div class="metric">
+						<p class="title">Partially</p>
 						<p class="value">${helper.numberWithCommas(d.doses_admin)}</p>
-					</div>
-					<div class="metric">
-						<p class="title">% used</p>
-						<p class="value">${d.pct_admin}%</p>
-					</div>
-					<div class="metric">
-						<p class="title">Per 100,000</p>
-						<p class="value">${helper.numberWithCommas(d.doses_per100k)}</p>
 					</div>
 				</div>
 			</div>
