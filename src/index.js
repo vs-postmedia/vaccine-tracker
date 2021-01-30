@@ -14,11 +14,9 @@ import helper from './js/helper-functions';
 
 
 // VARS
+const mapVariable = 'doses_per100k';
 const tableSortMetric = 'full_vax_per100k';
-const variable = 'doses_per100k';
 const legendTitle = 'Shots given per 100,000';
-// const variable = 'pct_admin';
-// const legendTitle = 'Doses used (%)';
 
 
 // DATA
@@ -45,7 +43,7 @@ const init = async () => {
 		header.innerHTML = headerCopy;
 
 		// build map
-		tilemap.init('#map', data, variable, legendTitle);
+		tilemap.init('#map', data, mapVariable, legendTitle);
 	}
 };
 

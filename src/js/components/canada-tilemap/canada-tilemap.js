@@ -53,7 +53,7 @@ const init = async(el, data, metric, legendTitle) => {
     addLabels(svg, data, label);
 
     // add colours & a legend
-    const scaleMax = d3.max(data, d => d[displayVariable]);
+    const scaleMax = d3.max(data, d => +d[displayVariable]);
     const colours = assignColours(scaleMax);
 	addLegend(map, colours, legendTitle, `${Math.floor(scaleMax)}+`, displayVariable);
 
@@ -93,11 +93,11 @@ function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
 
 	legend.append('p')
 			.attr('class', 'legend-value legend-value-right')
-			.text(`${Helper.numberWithCommas(Math.round(parseInt(scaleMax) / 100) * 100)}+`);
+			.text(`${Helper.numberWithCommas(Math.round(parseInt(scaleMax) / 10) * 10)}+`);
 }
 
 function assignColours(scaleMax) {
-	// colour scale (postmedia blue)
+	// colour scale 
 	return d3.scaleQuantile()
 		.domain([0, scaleMax])
 		.range(coloursArray);

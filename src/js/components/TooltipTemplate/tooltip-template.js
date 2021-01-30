@@ -6,7 +6,8 @@ function tooltip(data, variable) {
 	const template = `
 		<div class="tooltip-content">
 			<h4>${data.name}</h4>
-			<p class="doses">At least <span class="green">${helper.numberWithCommas(data.doses_admin)}</span> doses have been administered – roughly <span class="green">${helper.numberWithCommas(data[variable])}</span> doses per 100,000 people.</p>
+			<p class="doses">At least <span class="green">${helper.numberWithCommas(data.doses_admin)}</span> vaccine doses have been administered – <span class="green">${helper.numberWithCommas(data[variable])}</span> doses per 100,000 people.</p>
+			<p>At least <span class="green">${helper.numberWithCommas(data.full_vax)}</span> people are fully vaccinated.</p>
 		</div>
 	`;
 
