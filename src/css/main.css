@@ -41,13 +41,14 @@
 }
 
 #app footer {
-	display: flex;
+	/*display: flex;*/
 }
 
 #app footer > p {
 	flex: 1;
 }
 
+#app .note,
 #app .source {
 	margin-left: 5px;
 }
@@ -57,6 +58,10 @@
 #app .credit {
 	color: var(--grey02);
 	font-size: 0.8rem;
+}
+#app .note {
+	font-family: BentonSansCond-RegItalic;
+	line-height: 1rem;
 }
 
 #app .credit {
