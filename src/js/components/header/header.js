@@ -8,10 +8,10 @@ const init = async (data, provCode) => {
 
 	if (provCode !== 'CA') {
 		header = `
-			<h1>${prov.name} has administered <span class="highlight">${helper.numberWithCommas(parseInt(prov.doses_admin))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${Math.round(prov.pct_admin)}%</span> of the supply received from the federal government.</h1>
+			<h1>At least <span class="highlight">${helper.numberWithCommas(parseInt(prov.full_vax))}</span> people in ${prov.name} have been fully vaccinated against the coronavirus. Another <span class="highlight">${helper.numberWithCommas(parseInt(prov.doses_admin))}</span> have received at least one vaccine dose.</h1>
 		`;
 	} else {
-		header = '<h1>Doses of COVID-19 vaccine given per 100,000 people</h1>'
+		header = '<h1>Doses of COVID-19 vaccine administered per 100,000 people</h1>'
 	}
 
 	return header;
