@@ -1,16 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 111:
+/***/ 112:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Yuk.\",\"code\":\"YT\"},{\"y\":5,\"x\":2.5,\"name\":\"Northwest Territories\",\"abbr\":\"N.W.T.\",\"code\":\"NT\"},{\"y\":5,\"x\":3.5,\"name\":\"Nunavut\",\"abbr\":\"Nun.\",\"code\":\"NU\"},{\"y\":4,\"x\":1,\"name\":\"British Columbia\",\"abbr\":\"B.C.\",\"code\":\"BC\"},{\"y\":4,\"x\":2,\"name\":\"Alberta\",\"abbr\":\"Alta.\",\"code\":\"AB\"},{\"y\":4,\"x\":3,\"name\":\"Saskatchewan\",\"abbr\":\"Sask.\",\"code\":\"SK\"},{\"y\":4,\"x\":4,\"name\":\"Manitoba\",\"abbr\":\"Man.\",\"code\":\"MB\"},{\"y\":3.5,\"x\":5,\"name\":\"Ontario\",\"abbr\":\"Ont.\",\"code\":\"ON\"},{\"y\":3.5,\"x\":6,\"name\":\"Quebec\",\"abbr\":\"Que.\",\"code\":\"QC\"},{\"y\":4,\"x\":7,\"name\":\"Newfoundland and Labrador\",\"abbr\":\"Nfld.\",\"code\":\"NL\"},{\"y\":2.5,\"x\":6,\"name\":\"New Brunswick\",\"abbr\":\"N.B.\",\"code\":\"NB\"},{\"y\":3,\"x\":7,\"name\":\"Prince Edward Island\",\"abbr\":\"P.E.I.\",\"code\":\"PE\"},{\"y\":2,\"x\":7,\"name\":\"Nova Scotia\",\"abbr\":\"N.S.\",\"code\":\"NS\"}]");
-
-/***/ }),
-
-/***/ 162:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -35,7 +28,14 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 
 /***/ }),
 
-/***/ 187:
+/***/ 166:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 188:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -71,81 +71,87 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(69);
+var es_array_filter = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(55);
+var es_array_for_each = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(159);
+var es_array_map = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.sort.js
-var es_array_sort = __webpack_require__(160);
+var es_array_sort = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__(161);
+var es_object_assign = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(56);
+var web_dom_collections_for_each = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(11);
+var regenerator = __webpack_require__(7);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(34);
+var runtime = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(20);
+var asyncToGenerator = __webpack_require__(14);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(162);
+var normalize = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(163);
+var colors = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(164);
+var fonts = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(165);
+var main = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/d3/index.js + 293 modules
 var d3 = __webpack_require__(4);
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
+var es_array_concat = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__(59);
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
-var es_array_includes = __webpack_require__(166);
+var es_array_includes = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(58);
+var es_array_iterator = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(95);
+var es_object_to_string = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(96);
+var es_regexp_exec = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__(172);
+var es_regexp_to_string = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.includes.js
-var es_string_includes = __webpack_require__(173);
+var es_string_includes = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__(98);
+var es_string_iterator = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(177);
+var es_string_replace = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
-var es_string_search = __webpack_require__(179);
+var es_string_search = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
-var web_dom_collections_iterator = __webpack_require__(181);
+var web_dom_collections_iterator = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.js
-var web_url = __webpack_require__(182);
+var web_url = __webpack_require__(183);
 
 // CONCATENATED MODULE: ./src/js/helper-functions.js
 
@@ -185,41 +191,58 @@ var helper = {
 };
 /* harmony default export */ var helper_functions = (helper);
 // EXTERNAL MODULE: ./src/js/components/header/header.css
-var header_header = __webpack_require__(187);
+var header_header = __webpack_require__(188);
 
 // CONCATENATED MODULE: ./src/js/components/header/header.js
 
+
+
+
+
+
+
  // import template from 'header-template';
 
-const init = async (data, provCode) => {
-  let header;
-  const prov = data.filter(d => d.code === provCode)[0];
+var init = /*#__PURE__*/function () {
+  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(data, provCode) {
+    var header, prov;
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            prov = data.filter(function (d) {
+              return d.code === provCode;
+            })[0];
 
-  if (provCode !== 'CA') {
-    header = `
-			<h1>${prov.name} has administered <span class="highlight">${helper_functions.numberWithCommas(parseInt(prov.doses_admin))} doses</span> of COVID-19 vaccines so far – roughly <span class="highlight">${Math.round(prov.pct_admin)}%</span> of the supply received from the federal government.</h1>
-		`;
-  } else {
-    header = '<h1>Doses of COVID-19 vaccine given per 100,000 people</h1>';
-  }
+            if (provCode !== 'CA') {
+              header = "\n\t\t\t<h1>At least <span class=\"highlight\">".concat(helper_functions.numberWithCommas(parseInt(prov.full_vax)), "</span> people in ").concat(prov.name, " have been fully vaccinated against the coronavirus. Another <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov.doses_admin - prov.full_vax * 2)), "</span> have received one vaccine dose.</h1>\n\t\t");
+            } else {
+              header = '<h1>Doses of COVID-19 vaccine administered per 100,000 people</h1>';
+            }
 
-  return header;
-};
+            return _context.abrupt("return", header);
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function init(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 /* harmony default export */ var components_header_header = ({
-  init
+  init: init
 });
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
-var es_array_concat = __webpack_require__(106);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(188);
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
 var es_promise = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/papaparse/papaparse.min.js
-var papaparse_min = __webpack_require__(110);
+var papaparse_min = __webpack_require__(111);
 var papaparse_min_default = /*#__PURE__*/__webpack_require__.n(papaparse_min);
 
 // EXTERNAL MODULE: ./src/js/components/table/table.css
@@ -306,14 +329,14 @@ function getCopy(url) {
 }
 
 function rowTemplate(d) {
-  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\t\t<p class=\"copy\">").concat(d.copy, "</p>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>Doses administered</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">% used</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(d.pct_admin, "%</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_per100k), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
+  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\t\t<p class=\"copy\">").concat(d.copy, "</p>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>People vaccinated</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000 (fully)</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax_per100k), "</p>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Fully</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Partially</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
 }
 
 /* harmony default export */ var table_table = ({
   init: table_init
 });
 // EXTERNAL MODULE: ./node_modules/@flourish/popup/src/index.js + 5 modules
-var src = __webpack_require__(112);
+var src = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./src/js/components/TooltipTemplate/tooltip-template.css
 var tooltip_template = __webpack_require__(200);
@@ -322,13 +345,10 @@ var tooltip_template = __webpack_require__(200);
 
 
 
+
+
 function tooltip(data, variable) {
-  const template = `
-		<div class="tooltip-content">
-			<h4>${data.name}</h4>
-			<p class="doses">At least <span class="green">${helper_functions.numberWithCommas(data.doses_admin)}</span> doses have been administered – roughly <span class="green">${helper_functions.numberWithCommas(data[variable])}</span> doses per 100,000 people.</p>
-		</div>
-	`;
+  var template = "\n\t\t<div class=\"tooltip-content\">\n\t\t\t<h4>".concat(data.name, "</h4>\n\t\t\t<p class=\"doses\">At least <span class=\"green\">").concat(helper_functions.numberWithCommas(data.doses_admin), "</span> vaccine doses have been administered \u2013 <span class=\"green\">").concat(helper_functions.numberWithCommas(data[variable]), "</span> doses per 100,000 people.</p>\n\t\t\t<p>At least <span class=\"green\">").concat(helper_functions.numberWithCommas(data.full_vax), "</span> people are fully vaccinated.</p>\n\t\t</div>\n\t");
   return template;
 }
 
@@ -402,7 +422,7 @@ var canada_tilemap_init = /*#__PURE__*/function () {
             addLabels(svg, data, label); // add colours & a legend
 
             scaleMax = d3["c" /* max */](data, function (d) {
-              return d[canada_tilemap_displayVariable];
+              return +d[canada_tilemap_displayVariable];
             });
             colours = assignColours(scaleMax);
             addLegend(map, colours, legendTitle, "".concat(Math.floor(scaleMax), "+"), canada_tilemap_displayVariable); // set fill colour for shapes
@@ -437,11 +457,11 @@ function addLegend(svg, legendScale, legendTitle, scaleMax, displayVariable) {
   legend.append('p').attr('class', 'legend-title').text(legendTitle);
   legend.append('div').attr('class', 'legend-fill');
   legend.append('p').attr('class', 'legend-value legend-value-left').text('0');
-  legend.append('p').attr('class', 'legend-value legend-value-right').text("".concat(helper_functions.numberWithCommas(Math.round(parseInt(scaleMax) / 100) * 100), "+"));
+  legend.append('p').attr('class', 'legend-value legend-value-right').text("".concat(helper_functions.numberWithCommas(Math.round(parseInt(scaleMax) / 10) * 10), "+"));
 }
 
 function assignColours(scaleMax) {
-  // colour scale (postmedia blue)
+  // colour scale 
   return d3["e" /* scaleQuantile */]().domain([0, scaleMax]).range(coloursArray);
 }
 
@@ -466,7 +486,7 @@ function handleMouseout(d) {
   init: canada_tilemap_init
 });
 // EXTERNAL MODULE: ./src/data/canada-tilemap.json
-var data_canada_tilemap = __webpack_require__(111);
+var data_canada_tilemap = __webpack_require__(112);
 
 // CONCATENATED MODULE: ./src/index.js
 
@@ -491,10 +511,9 @@ var data_canada_tilemap = __webpack_require__(111);
 
  // VARS
 
-var src_variable = 'doses_per100k';
-var src_legendTitle = 'Shots given per 100,000'; // const variable = 'pct_admin';
-// const legendTitle = 'Doses used (%)';
-// DATA
+var mapVariable = 'doses_per100k';
+var tableSortMetric = 'full_vax_per100k';
+var src_legendTitle = 'Shots given per 100,000'; // DATA
 
 var vaxDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-vaccination-counts.csv';
 
@@ -527,7 +546,7 @@ var src_init = /*#__PURE__*/function () {
             }
 
             sorted = data.sort(function (a, b) {
-              return b.doses_per100k - a.doses_per100k;
+              return b[tableSortMetric] - a[tableSortMetric];
             });
             table_table.init(sorted, '#table');
             _context.next = 20;
@@ -541,7 +560,7 @@ var src_init = /*#__PURE__*/function () {
             headerCopy = _context.sent;
             header.innerHTML = headerCopy; // build map
 
-            canada_tilemap_canada_tilemap.init('#map', data, src_variable, src_legendTitle);
+            canada_tilemap_canada_tilemap.init('#map', data, mapVariable, src_legendTitle);
 
           case 20:
           case "end":
