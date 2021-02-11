@@ -215,9 +215,9 @@ var init = /*#__PURE__*/function () {
             })[0];
 
             if (provCode !== 'CA') {
-              header = "\n\t\t\t<h1>At least <span class=\"highlight\">".concat(helper_functions.numberWithCommas(parseInt(prov.full_vax)), "</span> people in ").concat(prov.name, " have been fully vaccinated against the coronavirus. Another <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov.doses_admin - prov.full_vax * 2)), "</span> have received one vaccine dose.</h1>\n\t\t");
+              header = "\n\t\t\t<h2>At least <span class=\"highlight\">".concat(helper_functions.numberWithCommas(parseInt(prov.full_vax)), "</span> people in ").concat(prov.name, " have been fully vaccinated against the coronavirus. Another <span class=\"highlight\">").concat(helper_functions.numberWithCommas(parseInt(prov.doses_admin - prov.full_vax * 2)), "</span> have received one vaccine dose.</h2>\n\t\t");
             } else {
-              header = '<h1>Doses of COVID-19 vaccine administered per 100,000 people</h1>';
+              header = '<h2>Doses of COVID-19 vaccine administered per 100,000 people</h2>';
             }
 
             return _context.abrupt("return", header);
