@@ -12,15 +12,15 @@ const copyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2cMRSXnkjEZqY
 const init = async (data, el) => {
 	// text is stored in google sheet
 	let copy;
-	try {
-		copy = await getCopy(copyUrl);
-	} catch (err) {
-		console.log(err)
-	}
+	// try {
+	// 	copy = await getCopy(copyUrl);
+	// } catch (err) {
+	// 	console.log(err)
+	// }
 
 	// build the table rows
 	data.forEach(d => {
-		d.copy = copy.data.filter(c => c.code === d.code)[0].text;
+		// d.copy = copy.data.filter(c => c.code === d.code)[0].text;
 		tableRows += rowTemplate(d);
 	});
 
@@ -40,9 +40,10 @@ function getCopy(url) {
 }
 
 function rowTemplate(d) {
+			// <p class="copy">${d.copy}</p>
 	return `
 		<h3 class="province">${d.name}</h3>
-		<p class="copy">${d.copy}</p>
+
 		<div class="row">
 			<div class="container received">
 				<h4>Doses received</h4>
