@@ -71,10 +71,10 @@ module.exports = JSON.parse("[{\"y\":5,\"x\":1.5,\"name\":\"Yukon\",\"abbr\":\"Y
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
-var es_array_filter = __webpack_require__(44);
+var es_array_filter = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
-var es_array_for_each = __webpack_require__(57);
+var es_array_for_each = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
 var es_array_map = __webpack_require__(160);
@@ -86,7 +86,7 @@ var es_array_sort = __webpack_require__(161);
 var es_object_assign = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__(58);
+var web_dom_collections_for_each = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
 var regenerator = __webpack_require__(7);
@@ -118,13 +118,13 @@ var d3 = __webpack_require__(4);
 var es_array_concat = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__(59);
+var es_function_name = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
 var es_array_includes = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__(61);
+var es_array_iterator = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
 var es_object_to_string = __webpack_require__(98);
@@ -260,7 +260,6 @@ var table = __webpack_require__(199);
 
 
 
-
  // VARS
 
 var table_copy;
@@ -275,37 +274,26 @@ var table_init = /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            _context.next = 3;
-            return getCopy(copyUrl);
-
-          case 3:
-            copy = _context.sent;
-            _context.next = 9;
-            break;
-
-          case 6:
-            _context.prev = 6;
-            _context.t0 = _context["catch"](0);
-            console.log(_context.t0);
-
-          case 9:
+            // text is stored in google sheet
+            // try {
+            // 	copy = await getCopy(copyUrl);
+            // } catch (err) {
+            // 	console.log(err)
+            // }
             // build the table rows
             data.forEach(function (d) {
-              d.copy = copy.data.filter(function (c) {
-                return c.code === d.code;
-              })[0].text;
+              // d.copy = copy.data.filter(c => c.code === d.code)[0].text;
               tableRows += rowTemplate(d);
             }); // add table to document
 
             document.querySelector(el).innerHTML = tableRows;
 
-          case 11:
+          case 2:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 6]]);
+    }, _callee);
   }));
 
   return function init(_x, _x2) {
@@ -329,7 +317,8 @@ function getCopy(url) {
 }
 
 function rowTemplate(d) {
-  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\t\t<p class=\"copy\">").concat(d.copy, "</p>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>People vaccinated</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000 (fully)</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax_per100k), "</p>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Fully</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Partially</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
+  // <p class="copy">${d.copy}</p>
+  return "\n\t\t<h3 class=\"province\">".concat(d.name, "</h3>\n\n\t\t<div class=\"row\">\n\t\t\t<div class=\"container received\">\n\t\t\t\t<h4>Doses received</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Received</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_rx), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"container administered\">\n\t\t\t\t<h4>People vaccinated</h4>\n\t\t\t\t<div class=\"metric-container\">\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Per 100,000 (fully)</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax_per100k), "</p>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Fully</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.full_vax), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"metric\">\n\t\t\t\t\t\t<p class=\"title\">Partially</p>\n\t\t\t\t\t\t<p class=\"value\">").concat(helper_functions.numberWithCommas(d.doses_admin), "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
 }
 
 /* harmony default export */ var table_table = ({
